@@ -1,7 +1,7 @@
 // Requiring our models and passport as we've configured it
-const db = require("../models");
+const db = require("../../models");
 const router = require("express").Router();
-const passport = require("../config/passport");
+const passport = require("../../config/passport");
 
 // eslint-disable-next-line prettier/prettier
 

@@ -1,7 +1,7 @@
 {
   "name": "song-bird",
   "version": "1.0.0",
-  "description": "A singer/songwriter's compendium of lyrics, chords, and other helpful musical information.",
+  "description": "A singer/songwriter's mobile compendium of lyrics, chords, and other helpful musical information.",
   "main": "server.js",
   "scripts": {
     "test": "npm run lint",

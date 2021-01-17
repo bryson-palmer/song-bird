@@ -22,8 +22,8 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-const authRoutes = require("./routes/authRoutes");
-const htmlRoutes = require("./routes/htmlRoutes");
+const authRoutes = require("./public/routes/authRoutes");
+const htmlRoutes = require("./public/routes/htmlRoutes");
 
 app.use(authRoutes, htmlRoutes);
 
