@@ -1,7 +1,3 @@
-/* eslint-disable no-var */
-/* eslint-disable vars-on-top */
-/* eslint-disable no-multi-spaces */
-/* eslint-disable prettier/prettier */
 "use strict";
 
 
