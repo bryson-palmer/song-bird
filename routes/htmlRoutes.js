@@ -10,7 +10,8 @@ router.get("/", (req, res) => {
   if (req.user) {
     res.redirect("/members");
   }
-  res.sendFile(path.join(__dirname, "public/assets/html/signup.html"));
+  console.log("inside the signup html route");
+  res.sendFile(path.join(__dirname, "../public/signup.html"));
 });
 
 router.get("/login", (req, res) => {
@@ -18,13 +19,15 @@ router.get("/login", (req, res) => {
   if (req.user) {
     res.redirect("/members");
   }
-  res.sendFile(path.join(__dirname, "public/assets/html/login.html"));
+  console.log("inside the login html route");
+  res.sendFile(path.join(__dirname, "../public/login.html"));
 });
 
 // Here we've add our isAuthenticated middleware to this route.
 // If a user who is not logged in tries to access this route they will be redirected to the signup page
 router.get("/members", isAuthenticated, (req, res) => {
-  res.sendFile(path.join(__dirname, "public/assets/html/members.html"));
+  console.log("inside the members html route");
+  res.sendFile(path.join(__dirname, "../public/members.html"));
 });
 
 // eslint-disable-next-line prettier/prettier
