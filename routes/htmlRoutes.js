@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
     res.redirect("/members");
   }
   console.log("inside the signup html route");
-  res.sendFile(path.join(__dirname, "../public/signup.html"));
+  res.render(path.join(__dirname, "../views/signup.handlebars"));
 });
 
 router.get("/login", (req, res) => {
@@ -20,19 +20,24 @@ router.get("/login", (req, res) => {
     res.redirect("/members");
   }
   console.log("inside the login html route");
-  res.sendFile(path.join(__dirname, "../public/login.html"));
+  res.render(path.join(__dirname, "../views/login.handlebars"));
 });
 
 // Here we've add our isAuthenticated middleware to this route.
 // If a user who is not logged in tries to access this route they will be redirected to the signup page
 router.get("/members", isAuthenticated, (req, res) => {
   console.log("inside the members html route");
-  res.sendFile(path.join(__dirname, "../public/members.html"));
+  res.render(path.join(__dirname, "../views/members.handlebars"));
 });
 
-// THOMAS ADDED THIS GET
+// THOMAS ADDED THIS GET FOR /createSong page
 router.get("/createSong", isAuthenticated, (req, res) => {
   res.render(path.join(__dirname, "../views/createSong.handlebars"));
+});
+
+// THOMAS ADDED THIS GET FOR /songBook page
+router.get("/songBook", isAuthenticated, (req, res) => {
+  res.render(path.join(__dirname, "../views/index.handlebars"));
 });
 
 // eslint-disable-next-line prettier/prettier
