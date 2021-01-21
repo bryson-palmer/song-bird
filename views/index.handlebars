@@ -2,41 +2,92 @@
 {{!-- I'm thinking this is what the members page becomes --}}
 {{!-- Should hold the search result partials and song partials like interchangeable blocks --}}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Create a Song</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-    <link href="stylesheets/style.css" rel="stylesheet">
-</head>
-<body>
-    <h1 id="createSong">Your about to create your own song!  Fill in the fields below to add this song to your SongBook</h1>
-    <form>
-        <label for="titlename">Title name:</label><br>
-            <input type="text" id="title" name="titlename" placeholder="Title"><br>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="public\images\SBWithJournal.gif">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>Your SongBook</h1>
+      <p>This area will hold some information about how the user can organize and manipulate their personal SongBook</p>
+      <hr>
+      <h3>Test</h3>
+      <p>Lorem ipsum...</p>
+    </div>
+    {{!-- <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div> --}}
+  </div>
+</div>
 
-        <label for="artistname">Artist name:</label><br>
-            <input type="text" id="artist" name="artistname" placeholder="Artist"><br><br>
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
 
-        <label for="temponame">Tempo:</label><br>
-            <input type="text" id="tempo" name="temponame" placeholder="Tempo"><br>
-
-        <label for="keyname">Key:</label><br>
-            <input type="text" id="key" name="keyname" placeholder="Key"><br><br>
-
-        <label for="chordsname">Chords:</label><br>
-            <input type="text" id="chords" name="chordsname" placeholder="Key"><br><br>
-        
-        <label for="lyricsname">Lyrics:</label><br>
-            <input type="text" id="lyrics" name="lyricsname" placeholder="Lyrics"><br><br>
-    
-            <input type="submit" value="Submit">
-    </form>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- <script type="text/javascript" src=""></script> -->
 </body>
 </html>
+
+{{!-- <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style> --}}
