@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
       min: 60,
       isNumeric: true
     },
-    key: {
+    songkey: {
       type: DataTypes.STRING,
       isNumeric: false
     },
@@ -26,7 +26,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT
     }
   });
-  //
   Song.associate = function(models) {
     Song.belongsTo(models.User, {
       foreignKey: {
