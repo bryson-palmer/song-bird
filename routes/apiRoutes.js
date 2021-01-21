@@ -38,19 +38,39 @@ app.get("/:id", (req, res) => {
 
 //api post/create route for song
 
-// app.post("/api/song", =>
-// --create( song )
-
 app.post("/api/song", (req, res) => {
   db.Post.create({
-    title: req.body.title
+    title: req.body.title,
+    artist: req.body.artist,
+    tempo: req.body.tempo,
+    songkey: req.body.songkey,
+    chords: req.body.chords,
+    lyrics: req.body.lyrics
   }).then(dbPost => {
     res.json(dbPost);
   });
 });
 
-// app.put("/api/song/:id", =>
-// --update( song )
+// song update route
 
-// app.delete("/api/song/:id", =>
-// --destroy( song )
+app.put("/api/song/:id", (req, res) => {
+  db.Post.update(req.body, {
+    where: {
+      id: req.body.id
+    }
+  }).then(dbPost => {
+    res.json(dbPost);
+  });
+});
+
+// song delete route
+
+app.delete("/api/song/:id", (req, res) => {
+  db.Post.destroy(req.body, {
+    where: {
+      id: req.params.id
+    }
+  }).then(dbPost => {
+    res.json(dbPost);
+  });
+});
