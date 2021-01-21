@@ -30,5 +30,10 @@ router.get("/members", isAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, "../public/members.html"));
 });
 
+// THOMAS ADDED THIS GET
+router.get("/createSong", isAuthenticated, (req, res) => {
+  res.render(path.join(__dirname, "../views/createSong.handlebars"));
+});
+
 // eslint-disable-next-line prettier/prettier
 module.exports = router;
