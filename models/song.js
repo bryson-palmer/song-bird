@@ -11,20 +11,20 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     tempo: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.INTEGER,
+      max: 200,
+      min: 60, 
+      isNumeric: true
     },
     key: {
       type: DataTypes.STRING,
-      allowNull: false
+      isNumeric: false
     },
     chords: {
       type: DataTypes.STRING,
-      allowNull: false
     },
     lyrics: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.TEXT,
     }
   });
   // 
