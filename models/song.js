@@ -1,10 +1,9 @@
-
 // Creating song model
 module.exports = function(sequelize, DataTypes) {
   const Song = sequelize.define("Song", {
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     artist: {
       type: DataTypes.STRING,
@@ -13,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
     tempo: {
       type: DataTypes.INTEGER,
       max: 200,
-      min: 60, 
+      min: 60,
       isNumeric: true
     },
     key: {
@@ -21,19 +20,19 @@ module.exports = function(sequelize, DataTypes) {
       isNumeric: false
     },
     chords: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
     },
     lyrics: {
-      type: DataTypes.TEXT,
+      type: DataTypes.TEXT
     }
   });
-  // 
+  //
   Song.associate = function(models) {
     Song.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       }
     });
-  }
+  };
   return Song;
 };
