@@ -1,4 +1,4 @@
--- Drops the blogger if it exists currently --
+-- Drops the song_bird if it exists currently --
 DROP DATABASE IF EXISTS song_bird;
--- Creates the "blogger" database --
+-- Creates the "song_bird" database --
 CREATE DATABASE song_bird;
