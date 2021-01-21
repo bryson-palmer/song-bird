@@ -36,7 +36,8 @@ $(document).ready(() => {
   }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+    console.log(err.responseJSON);
+    $("#alert .msg").text("Incorrect username or password");
     $("#alert").fadeIn(500);
   }
 });
