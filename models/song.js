@@ -16,16 +16,20 @@ module.exports = function(sequelize, DataTypes) {
     },
     tempo: {
       type: DataTypes.INTEGER,
-      max: 200,
-      min: 60,
-      isNumeric: true
+      validate: {
+        max: 200,
+        min: 60,
+        isNumeric: true
+      }
     },
     songkey: {
-      type: DataTypes.STRING,
-      isNumeric: false
+      type: DataTypes.STRING
+      // validate: {
+      //isNumeric: false
+      //}
     },
     chords: {
-      type: DataTypes.STRING
+      type: DataTypes.TEXT
     },
     lyrics: {
       type: DataTypes.TEXT
@@ -34,6 +38,7 @@ module.exports = function(sequelize, DataTypes) {
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
   });
+
   Song.associate = function(models) {
     Song.belongsTo(models.User, {
       foreignKey: {
