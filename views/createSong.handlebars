@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Create a Song</title>
+    <title>Songbirdie</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
     <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 <body>
-    <h1 id="createSong">Your about to create your own song!  Fill in the fields below to add this song to your SongBook</h1>
-    <form>
-        <label for="titlename">Title name:</label><br>
-            <input type="text" id="title" name="titlename" placeholder="Title"><br>
+    <h1 id="addSong">Add Song</h1>
+    <p id="addSongText"></p>Fill in the fields below and add this song to your SongBook</p>
+    <form class="create-form">
+        <label for="title">Title name:</label><br>
+        <input type="text" id="title" name="titlename" placeholder="Title"><br>
 
-        <label for="artistname">Artist name:</label><br>
-            <input type="text" id="artist" name="artistname" placeholder="Artist"><br><br>
+        <label for="artist">Artist name:</label><br>
+        <input type="text" id="artist" name="artistname" placeholder="Artist"><br><br>
 
-        <label for="temponame">Tempo:</label><br>
-            <input type="text" id="tempo" name="temponame" placeholder="Tempo"><br>
+        <label for="tempo">Tempo:</label><br>
+        <input type="text" id="tempo" name="temponame" placeholder="Tempo"><br>
 
-        <label for="keyname">Key:</label><br>
-            <input type="text" id="key" name="keyname" placeholder="Key"><br><br>
+        <label for="key">Key:</label><br>
+        <input type="text" id="key" name="keyname" placeholder="Key"><br><br>
 
-        <label for="chordsname">Chords:</label><br>
-            <input type="text" id="chords" name="chordsname" placeholder="Key"><br><br>
+        <label for="chords">Chords:</label><br>
+        <textarea id="chords" name="chordsname" placeholder="Chords"></textarea><br><br>
         
-        <label for="lyricsname">Lyrics:</label><br>
-            <input type="text" id="lyrics" name="lyricsname" placeholder="Lyrics"><br><br>
+        <label for="lyrics">Lyrics:</label><br>
+        <textarea id="lyrics" name="lyricsname" placeholder="Lyrics"></textarea><br><br>
     
-            <input type="submit" value="Submit">
+        <button type="submit" value="Submit">Add Song</button>
     </form>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- <script type="text/javascript" src=""></script> -->
+<script type="text/javascript" src="js/createSong.js"></script>
 </body>
 </html>

@@ -10,7 +10,6 @@ router.get("/", (req, res) => {
   if (req.user) {
     res.redirect("/members");
   }
-  console.log("inside the signup html route");
   res.render(path.join(__dirname, "../views/signup.handlebars"));
 });
 
@@ -19,14 +18,12 @@ router.get("/login", (req, res) => {
   if (req.user) {
     res.redirect("/members");
   }
-  console.log("inside the login html route");
   res.render(path.join(__dirname, "../views/login.handlebars"));
 });
 
 // Here we've add our isAuthenticated middleware to this route.
 // If a user who is not logged in tries to access this route they will be redirected to the signup page
 router.get("/members", isAuthenticated, (req, res) => {
-  console.log("inside the members html route");
   res.render(path.join(__dirname, "../views/members.handlebars"));
 });
 
