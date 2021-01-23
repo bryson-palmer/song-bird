@@ -32,10 +32,5 @@ router.get("/createSong", isAuthenticated, (req, res) => {
   res.render(path.join(__dirname, "../views/createSong.handlebars"));
 });
 
-// THOMAS ADDED THIS GET FOR /songBook page
-router.get("/songBook", isAuthenticated, (req, res) => {
-  res.render(path.join(__dirname, "../views/index.handlebars"));
-});
-
 // eslint-disable-next-line prettier/prettier
 module.exports = router;
