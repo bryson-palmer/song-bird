@@ -2,3 +2,15 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+#SBgif {
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  text-align: center;
+}
+#createSong {
+  text-align: center;
+}
