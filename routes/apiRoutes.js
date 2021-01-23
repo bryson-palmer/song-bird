@@ -4,33 +4,29 @@ const db = require("../models");
 const router = require("express").Router();
 
 //api search routes
-// router.get("/members", isAuthenticated, (req, res) => {
-//   db.Song.findAll(artists).then(dbSong => {
-//     res.json(dbSong);
-//   });
-// });
-
-router.get("/api/song", isAuthenticated, (req, res) => {
-  db.Song.findAll({
-    where: {
-      UserId: req.user.id
-    }
-  }).then(dbSong => {
+router.get("/members", isAuthenticated, (req, res) => {
+  db.Song.findAll(artists).then(dbSong => {
     res.json(dbSong);
   });
 });
 
-// router.get("/members", (req, res) => {
-//   db.Song.findAll(tempo).then(dbSong => {
-//     res.json(dbSong);
-//   });
-// });
+router.get("/members", (req, res) => {
+  db.Song.findAll(songs).then(dbSong => {
+    res.json(dbSong);
+  });
+});
 
-// router.get("/members", (req, res) => {
-//   db.Song.findAll(key).then(dbSong => {
-//     res.json(dbSong);
-//   });
-// });
+router.get("/members", (req, res) => {
+  db.Song.findAll(tempo).then(dbSong => {
+    res.json(dbSong);
+  });
+});
+
+router.get("/members", (req, res) => {
+  db.Song.findAll(key).then(dbSong => {
+    res.json(dbSong);
+  });
+});
 
 router.get("/:id", isAuthenticated, (req, res) => {
   db.Song.findOne({
@@ -54,9 +50,13 @@ router.post("/api/song", isAuthenticated, (req, res) => {
     chords: req.body.chords,
     lyrics: req.body.lyrics,
     UserId: req.body.UserId
-  }).then(dbSong => {
-    res.json(dbSong);
-  });
+  })
+    .then(dbSong => {
+      res.json(dbSong);
+    })
+    .catch(err => {
+      res.json(err);
+    });
 });
 
 // song update route
@@ -78,9 +78,13 @@ router.delete("/api/song/:id", isAuthenticated, (req, res) => {
     where: {
       id: req.params.id
     }
-  }).then(dbSong => {
-    res.json(dbSong);
-  });
+  })
+    .then(dbSong => {
+      res.json(dbSong);
+    })
+    .catch(err => {
+      res.json(err);
+    });
 });
 
 module.exports = router;
