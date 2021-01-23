@@ -1,4 +1,3 @@
-/* Background color for whole page */
 body {
   background-color: rgb(102, 84, 84);
 }
@@ -28,6 +27,23 @@ h2 {
 }
 #createSong {
   text-align: center;
+}
+
+/* Background hero for signin/login */
+.hero_logo {
+  height: 100vh;
+  background-image: url(../images/SBWithJournal.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.input-size {
+  /* width: 70vw; */
+}
+
+.text-color {
+  color: rgb(59, 179, 248);
 }
 
 /* -------------------- modal styling on members page ------------------- */
