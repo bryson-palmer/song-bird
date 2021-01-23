@@ -10,25 +10,60 @@
 </head>
 
 <body>
+      
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
-      <a class="navbar-brand" href="/createSong">
-      Add To Song Book
-      </a>
+      
+      <div class="menu-btn">
+      
+        <button id="myBtn">SongBirdie
+        </button>
+      
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+      
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- <p>Some text in the Modal..</p> -->
+            <ul class="topNav">
+              <a href="/members">SongBirdie</a>
+              <a class="navbar-brand" href="/logout">
+                Logout
+              </a>
+              <a class="navbar-brand" href="/createSong">
+                Add To Song Book
+              </a>      
+            </ul>
+          </div>
+      
+        </div>
+    </div>
     </div>
   </div>
 </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2>Welcome <span class="member-name"></span></h2>
+        <img id="SBgif" src="../images/SBWithJournal.gif">
+          <ul>
+            <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+              <div class="card-header" id="song-title">Song Title</div>
+              <div class="card-body">
+                <h5 class="card-title" id="artist-title">Artist Name</h5>
+                <p class="card-text" id="song-tempo"> Tempo: </p>
+                <p class="card-text" id="song-key"> Key: </p>
+                <p class="card-text" id="song-chords"> Chords: </p>
+                <p class="card-text" id="song-lyrics"> Lyrics: </p>
+              </div>
+            </div>
+          </ul>
     </div>
+          
   </div>
+</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
