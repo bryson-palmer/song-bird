@@ -5,8 +5,27 @@ $(document).ready(() => {
     $(".member-name").text(data.email);
   });
 
-  $.get("/api/song").then(data => {
-    console.log(data);
+  $.get("/api/song").then(songs => {
+    const artistSongs = $("<div>");
+
+    artistSongs.addClass("d-flex flex-col");
+
+    for (let i = 0; i < songs.length - 1; i++) {
+      const artist = $("<h4>").text(songs[i].artist);
+
+      artist.addClass("artist-name");
+
+      artistSongs.append(artist);
+
+      console.log("isthisworking");
+    }
+
+    $("#song-list").append(artistSongs);
+
+    console.log(songs);
+    console.log($("#song-list"));
+    console.log(artistSongs);
+    console.log(artist);
   });
 });
 
