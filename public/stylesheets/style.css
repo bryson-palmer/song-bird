@@ -2,14 +2,24 @@ body {
   background-color: rgb(102, 84, 84);
 }
 
+/* Members page */
+.members-page {
+  width: 100vw;
+  height: 100vh;
+  border: solid 5px rgb(102, 84, 84);
+  background-color: white;
+  margin: 0 auto;
+}
+
+
 form.signup,
 form.login {
   margin-top: 50px;
 }
 
 #SBgif {
-  width: 100%;
-  height: 100%;
+  width: 25%;
+  height: 25%;
 }
 
 h2 {
@@ -28,11 +38,99 @@ h2 {
   background-size: cover;
 }
 
-.input-size {
+ /* .input-size { */
   /* width: 70vw; */
-}
+/* } */
 
 .text-color {
   color: rgb(59, 179, 248);
+}
+
+/* -------------------- modal styling on members page ------------------- */
+
+/* Modal button */
+#songbirdie-tab {
+  color: white;
+  background-color: rgba(59, 179, 248, 0.884) !important;
+  border: none;
+  outline: none;
+  border-radius: 0 0 10px 10px;
+  padding: 0.5rem 1rem;
+  margin-left: 2rem;
+}
+
+/* Modal box */
+.modal-style {
+  width: 100%;
+  margin:auto;
+}
+
+/* modal close button x */
+.tab-close {
+  color: rgb(98, 3, 187) !important;
+  padding-right: 1rem;
+}
+
+/* modal window view */
+.modal-view {
+  background-color: rgba(59, 179, 248, 0.295) !important;
+  padding: 1rem;
+}
+
+/* modal links */
+.modal-view a {
+  color: rgb(98, 3, 187) !important;
+  padding: 1rem;
+}
+
+/* -------------------- members page content ------------------- */
+
+/* Members header box */
+.members-header {
   
+  background-color:  rgba(59, 179, 248, 0.295);
+  border-bottom: solid 1px grey;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+}
+
+/* Members banner */
+.members-banner {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+/* Banner text box */
+.banner-text-box{
+position: relative;
+top: 8rem;
+}
+
+/* Banner text */
+.banner-text {
+  text-align: right;
+  padding-right: 2rem;
+}
+
+/* Screen sizes 768 and up (iPad size) */
+@media screen and (min-width: 768px) {
+  .members-page {
+    width: 80vw;
+  }
+
+  .modal-style {
+    width: 40%;
+  }
+}
+
+/* Screen sizes 1024 and up (iPad pro/desktop size) */
+@media screen and (min-width: 1024px) {
+  .members-page {
+    width: 60vw;
+  }
+
+  .modal-style {
+    width: 60%;
+  }
 }

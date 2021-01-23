@@ -4,16 +4,19 @@ $(document).ready(() => {
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
   });
-  // $.get("/api/")
+
+  $.get("/api/song").then(data => {
+    console.log(data);
+  });
 });
 
 ///////////////////////// MODAL CODE BELOW //////////////////////////////////
 
 // Get the modal
-const modal = document.getElementById("myModal");
+const modal = document.getElementById("songbirdie-modal");
 
 // Get the button that opens the modal
-const btn = document.getElementById("myBtn");
+const btn = document.getElementById("songbirdie-tab");
 
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];

@@ -10,60 +10,46 @@
 </head>
 
 <body>
+  <!-- All content -->
+  <div class="members-page">
+
+    <!-- Members header -->
+    <header class="members-header">
       
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      
-      <div class="menu-btn">
-      
-        <button id="myBtn">SongBirdie
-        </button>
+      <!-- Modal box -->
+      <nav>
+
+        <!-- Modal tab button -->
+        <button id="songbirdie-tab">SongBirdie</button>
       
         <!-- The Modal -->
-        <div id="myModal" class="modal">
+        <div id="songbirdie-modal" class="modal modal-style text-center">
       
           <!-- Modal content -->
           <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close tab-close">&times;</span>
             <!-- <p>Some text in the Modal..</p> -->
-            <ul class="topNav">
+            <div class="modal-view">
               <a href="/members">SongBirdie</a>
-              <a class="navbar-brand" href="/logout">
-                Logout
-              </a>
-              <a class="navbar-brand" href="/createSong">
-                Add To Song Book
-              </a>      
-            </ul>
-          </div>
-      
-        </div>
-    </div>
-    </div>
-  </div>
-</nav>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <h2>Welcome <span class="member-name"></span></h2>
-        <img id="SBgif" src="../images/SBWithJournal.gif">
-          <ul>
-            <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
-              <div class="card-header" id="song-title">Song Title</div>
-              <div class="card-body">
-                <h5 class="card-title" id="artist-title">Artist Name</h5>
-                <p class="card-text" id="song-tempo"> Tempo: </p>
-                <p class="card-text" id="song-key"> Key: </p>
-                <p class="card-text" id="song-chords"> Chords: </p>
-                <p class="card-text" id="song-lyrics"> Lyrics: </p>
-              </div>
+              <a href="/logout">Logout</a>
+              <a href="/createSong">Add To Song Book</a>
             </div>
-          </ul>
-    </div>
-          
+          </div>
+        </div>
+      </nav>
+
+      <div class="members-banner">
+        <div class="banner-text-box">
+          <p class="banner-text">Welcome</br><span class="member-name"></span></p>
+        </div>
+        <img id="SBgif" src="../images/SBWithJournal.gif">
+      </div>
+    </header>
+
+    <main id="song-list" class="d-flex flex-column justify-content-center">
+
+    </main>
   </div>
-</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
