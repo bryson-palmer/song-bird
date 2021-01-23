@@ -33,19 +33,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     lyrics: {
       type: DataTypes.TEXT
-    },
-    // Timestamps
-    createdAt: {
-      type: "TIMESTAMP",
-      defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
-      allowNull: false
-    },
-    updatedAt: {
-      type: "TIMESTAMP",
-      defaultValue: sequelize.literal(
-        "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"
-      ),
-      allowNull: false
     }
   });
 
