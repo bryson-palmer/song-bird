@@ -10,7 +10,7 @@ $(document).ready(() => {
 
     artistSongs.addClass("d-flex flex-col");
 
-    for (let i = 0; i < songs.length - 1; i++) {
+    for (let i = 0; i < songs.length; i++) {
       const artist = $("<h4>").text(songs[i].artist);
 
       artist.addClass("artist-name");
