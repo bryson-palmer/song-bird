@@ -4,7 +4,10 @@ $(document).ready(() => {
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
   });
-  // $.get("/api/")
+
+  $.get("/api/song").then(data => {
+    console.log(data);
+  });
 });
 
 ///////////////////////// MODAL CODE BELOW //////////////////////////////////

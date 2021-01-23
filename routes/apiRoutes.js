@@ -4,29 +4,33 @@ const db = require("../models");
 const router = require("express").Router();
 
 //api search routes
-router.get("/members", isAuthenticated, (req, res) => {
-  db.Song.findAll(artists).then(dbSong => {
+// router.get("/members", isAuthenticated, (req, res) => {
+//   db.Song.findAll(artists).then(dbSong => {
+//     res.json(dbSong);
+//   });
+// });
+
+router.get("/api/song", isAuthenticated, (req, res) => {
+  db.Song.findAll({
+    where: {
+      UserId: req.user.id
+    }
+  }).then(dbSong => {
     res.json(dbSong);
   });
 });
 
-router.get("/members", (req, res) => {
-  db.Song.findAll(songs).then(dbSong => {
-    res.json(dbSong);
-  });
-});
+// router.get("/members", (req, res) => {
+//   db.Song.findAll(tempo).then(dbSong => {
+//     res.json(dbSong);
+//   });
+// });
 
-router.get("/members", (req, res) => {
-  db.Song.findAll(tempo).then(dbSong => {
-    res.json(dbSong);
-  });
-});
-
-router.get("/members", (req, res) => {
-  db.Song.findAll(key).then(dbSong => {
-    res.json(dbSong);
-  });
-});
+// router.get("/members", (req, res) => {
+//   db.Song.findAll(key).then(dbSong => {
+//     res.json(dbSong);
+//   });
+// });
 
 router.get("/:id", isAuthenticated, (req, res) => {
   db.Song.findOne({
