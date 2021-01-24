@@ -2,20 +2,21 @@
 
  <!-- All content -->
   <div class="members-page">
-
+  
     {{>header/header-block}}
-    
+  
     <main id="song-list" class="d-flex flex-column justify-content-center">
-<ul>
-         <li>Title: {{dataValues.title}}</li>
-         <li>Artist: {{dataValues.artist}}</li>
-         <li>tempo: {{dataValues.tempo}}</li>
-         <li>Key: {{dataValues.songkey}}</li>
-         <li>Chords: {{dataValues.chords}}</li>
-         
-       </ul>
+      <ul>
+        <li>Title: {{dataValues.title}}</li>
+        <li>Artist: {{dataValues.artist}}</li>
+        <li>Tempo: {{dataValues.tempo}}</li>
+        <li>Key: {{dataValues.songkey}}</li>
+        <li>Chords: {{dataValues.chords}}</li>
+        <li>Lyrics: {{dataValues.lyrics}}</li>
+  
+      </ul>
     </main>
   </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+<script type="text/javascript" src="/js/song.js"></script>

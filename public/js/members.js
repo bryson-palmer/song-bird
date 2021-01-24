@@ -7,12 +7,12 @@ $(document).ready(() => {
 
   $.get("/api/song", songs => {
     const artistSongs = $("<div>");
-    console.log(songs);
+    // console.log(songs);
 
-    artistSongs.addClass("d-flex flex-col");
+    artistSongs.addClass("songList d-flex flex-col");
 
     for (let i = 0; i < songs.length; i++) {
-      console.log(songs[i].id);
+      // console.log(songs[i].id);
       const artist = $("<a href='/song/" + songs[i].id.toString() + "' >").text(
         songs[i].title + ", " + songs[i].artist
       );
@@ -26,9 +26,9 @@ $(document).ready(() => {
 
     $("#song-list").append(artistSongs);
 
-    console.log(songs);
-    console.log($("#song-list"));
-    console.log(artistSongs);
+    // console.log(songs);
+    // console.log($("#song-list"));
+    // console.log(artistSongs);
   });
 });
 

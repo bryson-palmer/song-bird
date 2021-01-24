@@ -1,6 +1,9 @@
 body {
   background-color: rgb(102, 84, 84);
 }
+main {
+  text-align: center;
+}
 
 /* Members page */
 .members-page {
@@ -25,6 +28,7 @@ form.login {
 h2 {
   text-align: center;
 }
+
 #createSong {
   text-align: center;
 }
@@ -32,7 +36,7 @@ h2 {
 /* Background hero for signin/login */
 .hero_logo {
   height: 100vh;
-  background-image: url(../images/SBWithJournal.gif);
+  background-image: url(../images/SBsmTxtWithJournal10sec.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -113,6 +117,11 @@ top: 8rem;
   padding-right: 2rem;
 }
 
+/* SongList anchor text color */
+.songList a {
+  color: #333333;
+}
+
 /* Screen sizes 768 and up (iPad size) */
 @media screen and (min-width: 768px) {
   .members-page {
@@ -133,4 +142,14 @@ top: 8rem;
   .modal-style {
     width: 60%;
   }
+}
+
+/*----------------CreateSong.hbrs styling--------------------- */
+
+.create-form {
+  color: #333333;
+}
+
+#createSong {
+  color: #333333;
 }
