@@ -36,7 +36,7 @@ h2 {
 /* Background hero for signin/login */
 .hero_logo {
   height: 100vh;
-  background-image: url(../images/SBWithJournal.gif);
+  background-image: url(../images/SBsmTxtWithJournal10sec.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -144,7 +144,7 @@ top: 8rem;
   }
 }
 
-/*----------------create Song.hbrs styling--------------------- */
+/*----------------CreateSong.hbrs styling--------------------- */
 
 .create-form {
   color: #333333;
