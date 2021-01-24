@@ -28,6 +28,7 @@ form.login {
 h2 {
   text-align: center;
 }
+
 #createSong {
   text-align: center;
 }
@@ -116,6 +117,11 @@ top: 8rem;
   padding-right: 2rem;
 }
 
+/* SongList anchor text color */
+.songList a {
+  color: #333333;
+}
+
 /* Screen sizes 768 and up (iPad size) */
 @media screen and (min-width: 768px) {
   .members-page {
@@ -136,4 +142,14 @@ top: 8rem;
   .modal-style {
     width: 60%;
   }
+}
+
+/*----------------create Song.hbrs styling--------------------- */
+
+.create-form {
+  color: #333333;
+}
+
+#createSong {
+  color: #333333;
 }
