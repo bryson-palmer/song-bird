@@ -1,7 +1,7 @@
 // Requiring path to so we can use relative routes to our HTML files
 const path = require("path");
 const router = require("express").Router();
-
+const db = require("../models");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -30,6 +30,19 @@ router.get("/members", isAuthenticated, (req, res) => {
 // THOMAS ADDED THIS GET FOR /createSong page
 router.get("/createSong", isAuthenticated, (req, res) => {
   res.render(path.join(__dirname, "../views/createSong.handlebars"));
+});
+
+// THOMAS ADDED TO DISPLAY SONG INFO ON SONG PAGE
+router.get("/song/:id", isAuthenticated, (req, res) => {
+  console.log(req.params.id);
+  db.Song.findOne({
+    where: {
+      id: req.params.id
+    }
+  }).then(dbSong => {
+    console.log(dbSong);
+    res.render("song", dbSong);
+  });
 });
 
 // eslint-disable-next-line prettier/prettier
