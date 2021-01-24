@@ -6,45 +6,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="/stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
   <!-- All content -->
   <div class="members-page">
 
-    <!-- Members header -->
-    <header class="members-header">
-      
-      <!-- Modal box -->
-      <nav>
-
-        <!-- Modal tab button -->
-        <button id="songbirdie-tab">SongBirdie</button>
-      
-        <!-- The Modal -->
-        <div id="songbirdie-modal" class="modal modal-style text-center">
-      
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span class="close tab-close">&times;</span>
-            <!-- <p>Some text in the Modal..</p> -->
-            <div class="modal-view">
-              <a href="/members">SongBirdie</a>
-              <a href="/logout">Logout</a>
-              <a href="/createSong">Add To Song Book</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <div class="members-banner">
-        <div class="banner-text-box">
-          <p class="banner-text">Welcome</br><span class="member-name"></span></p>
-        </div>
-        <img id="SBgif" src="../images/SBWithJournal.gif">
-      </div>
-    </header>
+    {{>header/header-block}}
 
     <main id="song-list" class="d-flex flex-column justify-content-center">
 
@@ -52,7 +21,7 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+  <script type="text/javascript" src="/js/members.js"></script>
 
 </body>
 

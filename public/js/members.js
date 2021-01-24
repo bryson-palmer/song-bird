@@ -5,17 +5,21 @@ $(document).ready(() => {
     $(".member-name").text(data.email);
   });
 
-  $.get("/api/song").then(songs => {
+  $.get("/api/song", songs => {
     const artistSongs = $("<div>");
+    console.log(songs);
 
     artistSongs.addClass("d-flex flex-col");
 
     for (let i = 0; i < songs.length; i++) {
-      const artist = $("<h4>").text(songs[i].artist);
+      console.log(songs[i].id);
+      const artist = $("<a href='/song/" + songs[i].id.toString() + "' >").text(
+        songs[i].title + ", " + songs[i].artist
+      );
 
       artist.addClass("artist-name");
 
-      artistSongs.append(artist);
+      artistSongs.append(artist, "<br>");
 
       console.log("isthisworking");
     }
@@ -25,7 +29,6 @@ $(document).ready(() => {
     console.log(songs);
     console.log($("#song-list"));
     console.log(artistSongs);
-    console.log(artist);
   });
 });
 
