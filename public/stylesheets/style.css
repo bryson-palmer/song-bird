@@ -1,6 +1,9 @@
 body {
   background-color: rgb(102, 84, 84);
 }
+main {
+  text-align: center;
+}
 
 /* Members page */
 .members-page {

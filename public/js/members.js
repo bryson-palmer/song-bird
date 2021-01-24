@@ -6,7 +6,7 @@ $(document).ready(() => {
   });
 
   $.get("/api/song", songs => {
-    const artistSongs = $("<div>");
+    const artistSongs = $("<ul>");
     console.log(songs);
 
     artistSongs.addClass("d-flex flex-col");
