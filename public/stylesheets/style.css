@@ -23,6 +23,8 @@ h2 {
   text-shadow: 0px 0px 5px black;
 }
 
+/* -------------------- sign up and login content ------------------- */
+
 /* -------------------- hero container ------------------- */
 
 /* hero_box */
@@ -79,7 +81,7 @@ h2 {
   border-radius: 10px;
 }
 
-/* Sign up or login animation */
+/* Sign up or login button animation */
 .animate__animated.animate__bounceIn {
   --animate-delay: 5s;
   --animate-duration: 2s;
@@ -90,23 +92,26 @@ h2 {
   padding-left: 2rem;
 }
 
+/* -------------------- members page content ------------------- */
+
 /* -------------------- modal styling on members page ------------------- */
 
 /* Modal button */
 #songbirdie-tab {
   color: white;
+  font-size: 1.5rem;
   background-color: rgba(59, 179, 248, 0.884) !important;
   border: none;
   outline: none;
   border-radius: 0 0 10px 10px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   margin-left: 2rem;
 }
 
 /* Modal box */
 .modal-style {
   width: 100%;
-  margin:auto;
+  margin: auto;
 }
 
 /* modal close button x */
@@ -117,8 +122,19 @@ h2 {
 
 /* modal window view */
 .modal-view {
-  background-color: rgba(59, 179, 248, 0.295) !important;
+  background-color: transparent !important;
   padding: 1rem;
+}
+
+#search-btn {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: transparent;
+}
+
+#search-btn-img {
+  margin-bottom: -0.5rem;
 }
 
 /* modal links */
@@ -127,53 +143,63 @@ h2 {
   padding: 1rem;
 }
 
-/* -------------------- members page content ------------------- */
+/* -------------------- members page header ------------------- */
 
 /* Members page */
 .members-page {
-  width: 100vw;
   height: 100vh;
-  border: solid 5px rgb(102, 84, 84);
-  background-color: white;
+  background-image: url(../images/v-japanese-linen-paper-yellow-white.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto;
 }
 
 /* Members header box */
 .members-header {
-  background-color:  rgba(59, 179, 248, 0.295);
+  height: 15vh;
   border-bottom: solid 1px grey;
-  padding-bottom: 2rem;
-  margin: 0 auto;
+  margin-bottom: 6rem;
 }
 
 /* Members banner */
 .members-banner {
   display: flex;
   justify-content: center;
-  padding-top: 5rem;
 }
 
 /* Songbirdie logo on members */
 #SBgif {
-  width: 25%;
-  height: 25%;
-}
-
-/* Banner text box */
-.banner-text-box{
-position: relative;
-top: 8rem;
+  width: 100px;
+  height: 100px;
 }
 
 /* Banner text */
 .banner-text {
+  font-size: 1.5rem;
   text-align: right;
   padding-right: 2rem;
 }
 
-/* SongList anchor text color */
-.songList a {
-  color: #333333;
+/* -------------------- members page body ------------------- */
+
+.members-title {
+  font-size: 3.5rem;
+}
+
+/* List of songs */
+.song-list {
+  margin-top: 2rem;
+}
+
+/* Container for each listing */
+.artist-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-title, .artist-name {
+  font-size: 1.9rem;
 }
 
 /* -------------------- media queries 768 ------------------- */
@@ -208,7 +234,25 @@ top: 8rem;
   }
 
   .modal-style {
-    width: 40%;
+    width: 80%;
+  }
+
+  /* Members header box */
+  .members-header {
+    height: 18vh;
+  }
+
+  /* Banner text */
+  .banner-text {
+    font-size: 2.5rem;
+  }
+
+  .members-title {
+    font-size: 4rem;
+  }
+
+  .artist-title, .artist-name {
+    font-size: 2.5rem;
   }
 }
 
@@ -244,11 +288,25 @@ top: 8rem;
   }
 
   .members-page {
-    width: 60vw;
+    max-width: 1200px;
+    width: 80vw;
   }
 
   .modal-style {
-    width: 60%;
+    width: 80%;
+  }
+
+  /* Banner text */
+  .banner-text {
+    font-size: 3rem;
+  }
+
+  .members-title {
+    font-size: 4.5rem;
+  }
+
+  .artist-title, .artist-name {
+    font-size: 3.9rem;
   }
 }
 
