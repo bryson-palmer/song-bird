@@ -1,34 +1,48 @@
 $(document).ready(() => {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
+
+  // Get request for user data
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
   });
 
+  // Get request for list of songs in user's table
   $.get("/api/song", songs => {
+    // Create div
     const artistSongs = $("<div>");
-    // console.log(songs);
 
-    artistSongs.addClass("songList d-flex flex-col");
+    // Add class
+    artistSongs.addClass("song-list");
 
+    // Loop over list of songs in table
     for (let i = 0; i < songs.length; i++) {
-      // console.log(songs[i].id);
-      const artist = $("<a href='/song/" + songs[i].id.toString() + "' >").text(
-        songs[i].title + ", " + songs[i].artist
+      // Create div for each artist
+      const artistInfo = $("<div>");
+      artistInfo.addClass("artist-box");
+
+      // Artist song
+      const song = $("<a href='/song/" + songs[i].id.toString() + "' >").text(
+        songs[i].title
       );
 
-      artist.addClass("artist-name");
+      // Artist name
+      const artistName = $(
+        "<a href='/song/" + songs[i].id.toString() + "' >"
+      ).text(songs[i].artist);
 
-      artistSongs.append(artist, "<br>");
+      // Add class
+      song.addClass("artist-title");
+      artistName.addClass("artist-name");
 
-      console.log("isthisworking");
+      // Append to dynamically created div
+      artistInfo.append(song, artistName, "<br>");
+
+      artistSongs.append(artistInfo);
     }
 
-    $("#song-list").append(artistSongs);
-
-    // console.log(songs);
-    // console.log($("#song-list"));
-    // console.log(artistSongs);
+    // Append to heml
+    $("#song-list-box").append(artistSongs);
   });
 });
 
