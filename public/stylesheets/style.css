@@ -3,14 +3,6 @@ body {
   background: rgb(139, 211, 245);
 }
 
-main {
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
-}
-
 .text-white {
   color: white;
   font-size: 2rem;
@@ -148,7 +140,8 @@ h2 {
 /* Members page */
 .members-page {
   height: 100vh;
-  background-image: url(../images/v-japanese-linen-paper-yellow-white.jpg);
+  width: 100vw;
+  background-image: url(../images/h-paper-stock-white.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -159,7 +152,6 @@ h2 {
 .members-header {
   height: 15vh;
   border-bottom: solid 1px grey;
-  margin-bottom: 6rem;
 }
 
 /* Members banner */
@@ -183,6 +175,11 @@ h2 {
 
 /* -------------------- members page body ------------------- */
 
+/* Container holding h1 title and dynamic song title/artist on members page */
+.song-list-members {
+  text-align: center;
+}
+
 .members-title {
   font-size: 3.5rem;
 }
@@ -190,6 +187,8 @@ h2 {
 /* List of songs */
 .song-list {
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Container for each listing */
@@ -200,6 +199,7 @@ h2 {
 
 .artist-title, .artist-name {
   font-size: 1.9rem;
+  display: inline-block;
 }
 
 /* -------------------- media queries 768 ------------------- */
@@ -310,7 +310,7 @@ h2 {
   }
 }
 
-/*----------------CreateSong.hbrs styling--------------------- */
+/*---------------- CreateSong.hbrs styling --------------------- */
 
 .create-form {
   color: #333333;
@@ -319,4 +319,90 @@ h2 {
 #createSong {
   color: #333333;
   text-align: center;
+}
+
+/*---------------- Song hbrs styling --------------------- */
+
+/* Song page main section */
+.main-song {
+  height: 100%;
+  padding: 2rem;
+  background-image: url(../images/h-paper-stock-white.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+/* Container for title and artist */
+.title-artist-box {
+  line-height: 3rem;
+}
+
+/* Song title info */
+.song-title-label {
+  font-size: 2rem;
+  color: rgb(128, 128, 128);
+}
+
+.song-title {
+  font-size: 3rem;
+  color: black;
+  line-height: 1rem;
+}
+
+/* Song artist info */
+.song-artist-label {
+  font-size: 2rem;
+  color: rgb(128, 128, 128);
+}
+
+.song-artist {
+  font-size: 3rem;
+  color: black;
+  line-height: 1rem;
+}
+
+/* Container for song information */
+.song-info-box {
+  display: flex;
+  border: solid 1px rgba(128, 128, 128, 0.459);
+  padding: 1rem;
+}
+
+/* Chords information */
+.chords-box {
+  width: 50vw;
+}
+
+.chords {
+  font-size: 2rem;
+  color: black;
+}
+
+/* Other song information */
+.others-box {
+  display: flex;
+  flex-direction: column;
+  line-height: 1rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+.info-labels {
+  color: rgb(128, 128, 128);
+}
+
+.info {
+  color: black;
+  font-size: 2rem;
+}
+
+/* Lyrics */
+.lyrics {
+  color: black;
+  font-size: 2rem;
+  line-height: 5rem;
+  margin-top: 2rem;
+  padding: 1rem;
 }
