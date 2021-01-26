@@ -88,8 +88,14 @@ body {
 
 /* -------------------- modal styling on members page ------------------- */
 
+/* modal-box */
+.modal-box {
+  display: flex;
+  justify-content: flex-start;
+}
+
 /* Modal button */
-#songbirdie-tab {
+#songbirdie-tab, #delUpdate-tab {
   color: white;
   font-size: 1.5rem;
   background-color: rgba(59, 179, 248, 0.884) !important;

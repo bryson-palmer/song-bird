@@ -82,7 +82,9 @@ router.put("/api/song/:id", isAuthenticated, (req, res) => {
 // song delete route
 
 router.delete("/api/song/:id", isAuthenticated, (req, res) => {
-  db.Song.destroy(req.body, {
+  console.log(req.params.id);
+
+  db.Song.destroy({
     where: {
       id: req.params.id
     }

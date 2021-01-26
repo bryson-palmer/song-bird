@@ -32,7 +32,7 @@ $(document).ready(() => {
         data: newSong,
         method: "POST"
       }).then(() => {
-        alert("Adding " + newSong.title + " to your song book.");
+        // alert("Adding " + newSong.title + " to your song book.");
         window.location.href = "/members";
       });
     });
