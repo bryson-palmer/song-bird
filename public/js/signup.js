@@ -12,7 +12,14 @@ $(document).ready(() => {
       password: passwordInput.val().trim()
     };
 
-    if (!userData.email || !userData.password) {
+    // username or password cannot be empty
+    if (!userData.email) {
+      $("#alert .msg").text("username is empty");
+      $("#alert").fadeIn(500);
+      return;
+    } else if (!userData.password) {
+      $("#alert .msg").text("password is empty");
+      $("#alert").fadeIn(500);
       return;
     }
     // If we have an email and password, run the signUpUser function
@@ -37,7 +44,7 @@ $(document).ready(() => {
 
   function handleLoginErr(err) {
     console.log(err.responseJSON);
-    $("#alert .msg").text("Incorrect username or password");
+    $("#alert .msg").text("Username already exists");
     $("#alert").fadeIn(500);
   }
 });
