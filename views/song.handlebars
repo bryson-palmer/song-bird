@@ -2,13 +2,17 @@
 
  <!-- All content -->
   <div class="">
+    <div class="modal-box d-flex">
     {{!-- partials --}}
-    {{>modal/modal-block}}
+      {{>modal/modal-block}}
+      {{>delete/delete-block}}
+    </div>
     {{>header/header-block}}
   
     <main id="song-list" class="main-song">
       {{!-- Header on song page --}}
       <div class="song-header">
+        
         {{!-- Header details --}}
         <div class="title-artist-box">
           <h1 class="song-title-label">Title: <span class="song-title">{{dataValues.title}}</span></h1>
