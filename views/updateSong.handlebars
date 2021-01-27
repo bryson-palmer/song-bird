@@ -1,0 +1,33 @@
+<link href="/stylesheets/style.css" rel="stylesheet">
+
+{{>modal/modal-block}}
+{{>header/header-block}}
+
+<main id="updateSong" class="col-md-6 col-md-offset-3">
+    <h1 id="addSong">Update Song</h1>
+    <p id="addSongText"></p>Update your song here and save it to your songbook.</p>
+    <form class="update-song" data-id="{{dataValues.id}}">
+        <label for="title">Title name:</label><br>
+        <input size="47.5" type="text" id="title" name="titlename" value="{{dataValues.title}}"><br>
+
+        <label for="artist">Artist name:</label><br>
+        <input size="47.5" type="text" id="artist" name="artistname" value="{{dataValues.artist}}"><br><br>
+
+        <label for="tempo">Tempo:</label><br>
+        <input size="47.5" type="text" id="tempo" name="temponame" value="{{dataValues.tempo}}"><br>
+
+        <label for="key">Key:</label><br>
+        <input size="47.5" type="text" id="key" name="keyname" value="{{dataValues.songkey}}"><br><br>
+
+        <label for="chords">Chords:</label><br>
+        <textarea rows="6" cols="50" id="chords" name="chordsname">{{dataValues.chords}}</textarea><br><br>
+
+        <label for="lyrics">Lyrics:</label><br>
+        <textarea rows="25" cols="50" id="lyrics" name="lyricsname">{{dataValues.lyrics}}</textarea><br><br>
+
+        <button type="submit" value="Submit">Update Song</button>
+    </form>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/song.js"></script>

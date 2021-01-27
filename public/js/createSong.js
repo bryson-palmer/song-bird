@@ -1,10 +1,14 @@
-$(document).ready(() => {
-  $(".create-form").on("submit", event => {
-    event.preventDefault();
+// Make sure we wait to attach our handlers until the DOM is fully loaded.
+$(() => {
+  // Song form submit
+  $(".create-song").on("submit", e => {
+    e.preventDefault();
 
+    // Get user info
     $.get("/api/user_data").then(data => {
       const userId = data.id;
 
+      // Grab user values
       const newSong = {
         title: $("#title")
           .val()
@@ -26,11 +30,11 @@ $(document).ready(() => {
           .trim(),
         UserId: userId
       };
-
+      // ajax call
       $.ajax({
-        url: "/api/song",
+        url: "/api/addSong",
         data: newSong,
-        method: "POST"
+        type: "POST"
       }).then(() => {
         // alert("Adding " + newSong.title + " to your song book.");
         window.location.href = "/members";

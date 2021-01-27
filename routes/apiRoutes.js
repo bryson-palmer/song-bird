@@ -1,10 +1,9 @@
-// Requiring models and router
-const isAuthenticated = require("../config/middleware/isAuthenticated");
-const db = require("../models");
 const router = require("express").Router();
+const db = require("../models");
+// Requiring our custom middleware for checking if a user is logged in
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 //api search routes
-
 router.get("/api/song", isAuthenticated, (req, res) => {
   db.Song.findAll({
     // attributes: [artist, title],
@@ -12,8 +11,6 @@ router.get("/api/song", isAuthenticated, (req, res) => {
       UserId: req.user.id
     }
   }).then(dbSong => {
-    console.log(dbSong.artist);
-
     res.json(dbSong);
   });
 });
@@ -30,12 +27,14 @@ router.get("/api/song", isAuthenticated, (req, res) => {
 //   });
 // });
 
+// get route for all songs and artists to be displayed on members page
 router.get("/members", (req, res) => {
   db.Song.findAll(key).then(dbSong => {
     res.json(dbSong);
   });
 });
 
+// get route for a single song to be displayed on the song page
 router.get("/:id", isAuthenticated, (req, res) => {
   db.Song.findOne({
     where: {
@@ -46,10 +45,8 @@ router.get("/:id", isAuthenticated, (req, res) => {
   });
 });
 
-//api post/create route for song
-
-router.post("/api/song", isAuthenticated, (req, res) => {
-  console.log(req.body);
+// api post/create route for song
+router.post("/api/addSong", isAuthenticated, (req, res) => {
   db.Song.create({
     title: req.body.title,
     artist: req.body.artist,
@@ -67,23 +64,30 @@ router.post("/api/song", isAuthenticated, (req, res) => {
     });
 });
 
-// song update route
-
+// api put/update route for a single song
 router.put("/api/song/:id", isAuthenticated, (req, res) => {
-  db.Song.update(req.body, {
-    where: {
-      id: req.body.id
+  db.Song.update(
+    {
+      title: req.body.title,
+      artist: req.body.artist,
+      tempo: req.body.tempo,
+      songkey: req.body.songkey,
+      chords: req.body.chords,
+      lyrics: req.body.lyrics,
+      UserId: req.body.UserId
+    },
+    {
+      where: {
+        id: req.params.id
+      }
     }
-  }).then(dbSong => {
+  ).then(dbSong => {
     res.json(dbSong);
   });
 });
 
-// song delete route
-
+// api delete/destroy route for a singel song
 router.delete("/api/song/:id", isAuthenticated, (req, res) => {
-  console.log(req.params.id);
-
   db.Song.destroy({
     where: {
       id: req.params.id

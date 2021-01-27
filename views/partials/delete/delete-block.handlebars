@@ -2,18 +2,26 @@
 <nav>
 
     <!-- Modal tab button -->
-    <button id="delUpdate-tab">Edit Page</button>
+    <button id="delete-tab">Delete/Update</button>
 
     <!-- The Modal -->
-    <div id="delUpdate-modal" class="modal modal-style text-center">
+    <div id="delete-modal" class="modal modal-style text-center">
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="delclose tab-close">&times;</span>
+            <span class="delete-close tab-close">&times;</span>
             <div class="modal-view">
                 <form class="form-inline">
-                    <button value="{{dataValues.id}}" id="delSong">Delete Song</button>
-                    <a href="/updateSong">Edit Song</a>
+                    <!-- Search button -->
+                    <button type="submit" class="mr-1 ml-1" id="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="rgb(98, 3, 187)" class="bi bi-search mb-1" id="search-btn-img" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </button>
+                    <!-- Song search field -->
+                    <input type="text" class="mt-0 ml-1" id="song-name" placeholder="Search">
+                    <button data-id="{{dataValues.id}}" class="delete-song">Delete Song</button>
+                    <a href="/song/edit/{{dataValues.id}}">Edit Song</a>
                 </form>
             </div>
         </div>
