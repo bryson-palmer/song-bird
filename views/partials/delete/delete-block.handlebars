@@ -2,14 +2,14 @@
 <nav>
 
     <!-- Modal tab button -->
-    <button id="delUpdate-tab">Delete/Update</button>
+    <button id="delete-tab">Delete/Update</button>
 
     <!-- The Modal -->
-    <div id="delUpdate-modal" class="modal modal-style text-center">
+    <div id="delete-modal" class="modal modal-style text-center">
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="delclose tab-close">&times;</span>
+            <span class="delete-close tab-close">&times;</span>
             <div class="modal-view">
                 <form class="form-inline">
                     <!-- Search button -->
@@ -20,8 +20,8 @@
                     </button>
                     <!-- Song search field -->
                     <input type="text" class="mt-0 ml-1" id="song-name" placeholder="Search">
-                    <button value="{{dataValues.id}}" id="delSong">Delete Song</button>
-                    <a href="/updateSong">Edit Song</a>
+                    <button data-id="{{dataValues.id}}" class="delete-song">Delete Song</button>
+                    <a href="/song/edit/{{dataValues.id}}">Edit Song</a>
                 </form>
             </div>
         </div>
