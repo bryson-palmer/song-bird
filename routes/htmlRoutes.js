@@ -1,4 +1,4 @@
-// Requiring path to so we can use relative routes to our HTML files
+// Requiring path so we can use relative routes to our HTML files
 const path = require("path");
 const router = require("express").Router();
 const db = require("../models");
@@ -28,13 +28,12 @@ router.get("/members", isAuthenticated, (req, res) => {
 });
 
 // THOMAS ADDED THIS GET FOR /createSong page
-router.get("/createSong", isAuthenticated, (req, res) => {
+router.get("/addSong", isAuthenticated, (req, res) => {
   res.render(path.join(__dirname, "../views/createSong.handlebars"));
 });
 
 // THOMAS ADDED TO DISPLAY SONG INFO ON SONG PAGE
 router.get("/song/:id", isAuthenticated, (req, res) => {
-  console.log(req.params.id);
   db.Song.findOne({
     where: {
       id: req.params.id
@@ -42,6 +41,17 @@ router.get("/song/:id", isAuthenticated, (req, res) => {
   }).then(dbSong => {
     console.log(dbSong);
     res.render("song", dbSong);
+  });
+});
+
+// BRYSON ADDED THIS GET TO DISPLAY THE DATA IN THE PUT FORM (from class time with group)
+router.get("/song/edit/:id", isAuthenticated, (req, res) => {
+  db.Song.findOne({
+    where: {
+      id: req.params.id
+    }
+  }).then(dbSong => {
+    res.render("updateSong", dbSong);
   });
 });
 

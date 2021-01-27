@@ -95,7 +95,7 @@ body {
 }
 
 /* Modal button */
-#songbirdie-tab, #delUpdate-tab {
+#songbirdie-tab, #delete-tab {
   color: white;
   font-size: 1.5rem;
   background-color: rgba(59, 179, 248, 0.884) !important;
@@ -318,7 +318,7 @@ body {
 
 /*---------------- CreateSong.hbrs styling --------------------- */
 
-.create-form {
+.create-song {
   color: #333333;
 }
 

@@ -3,73 +3,106 @@ $.get("/api/user_data").then(data => {
   $(".member-name").text(data.email);
 });
 
+// Make sure we wait to attach our handlers until the DOM is fully loaded.
+$(() => {
+  // Update song form submit
+  $(".update-song").on("submit", e => {
+    e.preventDefault();
+
+    // Grab user values
+    const updatedSong = {
+      title: $("#title")
+        .val()
+        .trim(),
+      artist: $("#artist")
+        .val()
+        .trim(),
+      tempo: $("#tempo")
+        .val()
+        .trim(),
+      songkey: $("#key")
+        .val()
+        .trim(),
+      chords: $("#chords")
+        .val()
+        .trim(),
+      lyrics: $("#lyrics")
+        .val()
+        .trim()
+    };
+    // ajax call
+    $.ajax({
+      url: "/api/song/" + e.target.dataset.id,
+      type: "PUT",
+      data: updatedSong
+    }).then(() => {
+      window.location.href = "/song/" + e.target.dataset.id;
+    });
+  });
+
+  // Delete function
+  $(".delete-song").on("click", e => {
+    $.ajax({
+      url: "/api/song/" + e.target.dataset.id,
+      type: "DELETE"
+    }).then(() => {
+      window.location.href = "/members";
+    });
+  });
+});
+
 ///////////////////////// MODAL CODE BELOW //////////////////////////////////
 
 // Get the modal
-const modal = document.getElementById("songbirdie-modal");
+const modal1 = document.getElementById("songbirdie-modal");
 
 // Get the button that opens the modal
-const btn = document.getElementById("songbirdie-tab");
+const btn1 = document.getElementById("songbirdie-tab");
 
 // Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
+const span1 = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+btn1.onclick = function() {
+  modal1.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+span1.onclick = function() {
+  modal1.style.display = "none";
 };
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
+  if (event.target === modal1) {
+    modal1.style.display = "none";
   }
 };
 
 ///////////////////////// DELETE MODAL CODE BELOW //////////////////////////////////
 
-// Get the modal
-const delmodal = document.getElementById("delUpdate-modal");
-
 // Get the button that opens the modal
-const delbtn = document.getElementById("delUpdate-tab");
+const btn2 = document.getElementById("delete-tab");
+
+// Get the modal
+const modal2 = document.getElementById("delete-modal");
 
 // Get the <span> element that closes the modal
-const delspan = document.getElementsByClassName("delclose")[0];
-
-// del function
-const delSong = document.getElementById("delSong");
-
-delSong.onclick = function(e) {
-  e.preventDefault();
-  console.log(e.target.value);
-
-  $.ajax({
-    url: `/api/song/${e.target.value}`,
-    type: "DELETE"
-  }).then(() => {
-    window.location.href = "/members";
-  });
-};
+const span2 = document.getElementsByClassName("delete-close")[0];
 
 // When the user clicks on the button, open the modal
-delbtn.onclick = function() {
-  delmodal.style.display = "block";
+btn2.onclick = function() {
+  modal2.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
-delspan.onclick = function() {
-  delmodal.style.display = "none";
+span2.onclick = function() {
+  modal2.style.display = "none";
 };
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target === delmodal) {
-    delmodal.style.display = "none";
+  if (event.target === modal2) {
+    modal2.style.display = "none";
   }
 };
