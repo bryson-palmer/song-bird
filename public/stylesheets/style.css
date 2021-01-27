@@ -1,6 +1,11 @@
 body {
   width: 100vw;
-  background: rgb(139, 211, 245);
+  height: 100vh;
+  background-image: url(../images/h-paper-stock-white.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto; 
 }
 
 .text-white {
@@ -92,6 +97,7 @@ body {
 .modal-box {
   display: flex;
   justify-content: flex-start;
+  background-color: rgb(173, 226, 250);
 }
 
 /* Modal button */
@@ -103,7 +109,7 @@ body {
   outline: none;
   border-radius: 0 0 10px 10px;
   padding: 0.5rem 1.5rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 /* Modal box */
@@ -147,16 +153,12 @@ body {
 .members-page {
   height: 100vh;
   width: 100vw;
-  background-image: url(../images/h-paper-stock-white.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0 auto;
 }
 
 /* Members header box */
 .members-header {
   height: 15vh;
+  background-color: rgb(173, 226, 250);
   border-bottom: solid 1px grey;
 }
 
