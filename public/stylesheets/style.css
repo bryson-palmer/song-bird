@@ -254,6 +254,8 @@ song title/artist on members page */
 .artist-box {
   display: flex;
   flex-direction: column;
+  line-height: 1.1;
+  margin-top: 13px;
 }
 
 /* Styling for each artist/song */
