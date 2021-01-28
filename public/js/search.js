@@ -5,9 +5,9 @@ $(document).ready(() => {
 
   function searchSong() {
     const str = searchBar.val();
-    alert("song clicked");
-    console.log(str);
-  }
+    // alert("song clicked");
+    // console.log(str);
+  };
 
   songSearch.on("click", event => {
     event.preventDefault();
@@ -17,29 +17,33 @@ $(document).ready(() => {
 
 //console.log("aaaaaaaaaaaaaaaa");
 
-//send post route
+//send get route
 //trigger database search
 //select * where song = searchbar input value
+// SELECT * WHERE song = searchBar.val().trim(); ?
 //push info to front to view
 //change html to view searched item
+//template literal
+//song title = title
+//song artist = artist
 
-$("searchBar").on("submit", e => {
-  e.preventDefault();
-  const searchTest = searchBar.val().trim();
+// $("searchBar").on("submit", e => {
+//   e.preventDefault();
+//   const searchTest = searchBar.val().trim();
 
-});
+// });
 
-const getSong = options => {
-  let url = "/api/song";
+// const getSong = options => {
+//   let url = "/api/song";
 
-  if (options) {
-    url += "?" + new URLSearchParams(options).toString();
-  }
+//   if (options) {
+//     url += "?" + new URLSearchParams(options).toString();
+//   }
 
-  $.ajax({
-    url
-  }).then(res => {
-    displaySongs(res);
-  });
+//   $.ajax({
+//     url
+//   }).then(res => {
+//     displaySongs(res);
+//   });
 
-};
+// };

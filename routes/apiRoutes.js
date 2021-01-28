@@ -46,24 +46,25 @@ router.get("/:id", isAuthenticated, (req, res) => {
   });
 });
 
-router.get("/:id", isAuthenticated, (req, res) => {
-  const songWhere = {
-    UserId: req.user.id
-  };
+//anthony demo code
+// router.get("/:id", isAuthenticated, (req, res) => {
+//   const songWhere = {
+//     UserId: req.user.id
+//   };
 
-  if(req.query.title) {
-    songWhere.name = {
-      [Op.like]: `%${req.query.title}%`;
-    };
-  }
+//   if(req.query.title) {
+//     songWhere.name = {
+//       [Op.like]: `%${req.query.title}%`;
+//     };
+//   }
 
-  Song.findAll({
-    where: songWhere
-  }).then(books => {
-    res.json(songs);
-  });
+//   Song.findAll({
+//     where: songWhere
+//   }).then(books => {
+//     res.json(songs);
+//   });
 
-});
+// });
 
 // api post/create route for song
 router.post("/api/addSong", isAuthenticated, (req, res) => {
