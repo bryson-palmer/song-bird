@@ -27,9 +27,9 @@ $(document).ready(() => {
       );
 
       // Artist name
-      const artistName = $(
-        "<a href='/song/" + songs[i].id.toString() + "' >"
-      ).text(songs[i].artist);
+      const artistName = $("<li>songs[i].id.toString() </li>").text(
+        songs[i].artist
+      );
 
       // Add class
       song.addClass("artist-title");
