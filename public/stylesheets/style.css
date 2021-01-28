@@ -1,6 +1,8 @@
 body {
   width: 100vw;
-  background: rgb(139, 211, 245);
+  height: 100vh;
+  background-color:rgb(41, 40, 40);
+  margin: 0 auto; 
 }
 
 .text-white {
@@ -15,9 +17,7 @@ body {
   text-shadow: 0px 0px 5px black;
 }
 
-/* -------------------- sign up and login content ------------------- */
-
-/* -------------------- hero container ------------------- */
+/* ------------------- Sign up and Login content ------------------- */
 
 /* hero_box */
 .hero_box {
@@ -84,42 +84,93 @@ body {
   padding-left: 2rem;
 }
 
-/* -------------------- members page content ------------------- */
+/* ------------------ Header styling on all pages ------------------ */
 
-/* -------------------- modal styling on members page ------------------- */
+/* Header container for all pages */
+.header-box {
+  background-color: rgba(60, 185, 243, 0.678);
+  margin: 0 auto;
+}
+
+/* Members header box */
+.header-inner-box {
+  height: 10vh;
+  border-bottom: solid 1px grey;
+  margin: 0 auto;
+}
+
+/* Members banner */
+.header-banner {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-content: flex-end; */
+  position: relative;
+}
+
+/* Banner text */
+.banner-text {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  font-size: 1.3rem;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+/* Songbirdie logo on members */
+#SBgif {
+  position: absolute;
+  /* top: -3rem;
+  right: 3rem; */
+  /* width: 80px;
+  height: 80px; */
+  box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
+}
+
+/* ------------------ Modal styling on all pages ------------------ */
 
 /* modal-box */
 .modal-box {
   display: flex;
-  justify-content: flex-start;
+  margin: 0 auto;
 }
 
 /* Modal button */
-#songbirdie-tab, #delete-tab {
-  color: white;
-  font-size: 1.5rem;
-  background-color: rgba(59, 179, 248, 0.884) !important;
+.modal-tab {
+  color: rgba(23, 54, 95, 0.644);;
+  font-size: 1rem;
+  background: rgb(2,0,36);
+  background: linear-gradient(65deg, rgb(187, 187, 240) 0%, rgb(144, 198, 223) 7%, rgba(0,224,255,0.5998774509803921) 100%);
+  box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
   border: none;
   outline: none;
   border-radius: 0 0 10px 10px;
   padding: 0.5rem 1.5rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
-/* Modal box */
-.modal-style {
+/* Modal inner box */
+.modal-inner-box {
   width: 100%;
   margin: auto;
 }
 
+/* Modal content box */
+.modal-content {
+  display: flex;
+}
+
 /* modal close button x */
-.tab-close {
+.modal-close {
   color: rgb(98, 3, 187) !important;
-  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 2.5rem;
 }
 
 /* modal window view */
 .modal-view {
+  display: flex;
+  flex-wrap: wrap;
   background-color: transparent !important;
   padding: 1rem;
 }
@@ -135,60 +186,59 @@ body {
   margin-bottom: -0.5rem;
 }
 
+/* Delete button in edit modal */
+#delete-btn {
+  color: rgb(98, 3, 187);
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 /* modal links */
 .modal-view a {
   color: rgb(98, 3, 187) !important;
   padding: 1rem;
 }
 
-/* -------------------- members page header ------------------- */
+/* ---------------- Styling for all full pages ---------------- */
 
-/* Members page */
-.members-page {
-  height: 100vh;
+/* Full page styling */
+.full-page {
+  max-width: 800px;
   width: 100vw;
+  background-color: rgb(173, 226, 250);
   background-image: url(../images/h-paper-stock-white.jpg);
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: auto;
+  margin: 0 auto;
+  opacity: 0.9;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.301);
+}
+
+/* Song page main section */
+.main-song {
+  max-height: 100%;
+  padding: 2rem;
   margin: 0 auto;
 }
 
-/* Members header box */
-.members-header {
-  height: 15vh;
-  border-bottom: solid 1px grey;
-}
+/* --------------------- Members page body --------------------- */
 
-/* Members banner */
-.members-banner {
-  display: flex;
-  justify-content: center;
-}
-
-/* Songbirdie logo on members */
-#SBgif {
-  width: 100px;
-  height: 100px;
-}
-
-/* Banner text */
-.banner-text {
-  font-size: 1.5rem;
-  text-align: right;
-  padding-right: 2rem;
-}
-
-/* -------------------- members page body ------------------- */
-
-/* Container holding h1 title and dynamic song title/artist on members page */
-.song-list-members {
+/* Container holding h1 title and dynamic 
+song title/artist on members page */
+.main-members {
   text-align: center;
+  height: 100vh;
+  padding: 2rem;
 }
 
-.members-title {
+/* title for members page <h1> */
+.title-members {
   font-size: 3.5rem;
 }
+
+/* -------------- Members page dynamic song list -------------- */
 
 /* List of songs */
 .song-list {
@@ -197,18 +247,223 @@ body {
   flex-direction: column;
 }
 
-/* Container for each listing */
+/* Container for each song/artist listing */
 .artist-box {
   display: flex;
   flex-direction: column;
 }
 
+/* Styling for each artist/song */
 .artist-title, .artist-name {
   font-size: 1.9rem;
   display: inline-block;
 }
 
-/* -------------------- media queries 768 ------------------- */
+/* ---------------------- Song page body ---------------------- */
+
+/* Song header */
+/* .song-header {
+  
+} */
+
+/* Container for title and artist */
+.title-artist-box {
+  line-height: 3rem;
+}
+
+/* Song title label */
+.song-title-label {
+  font-size: 2rem;
+  color: rgb(128, 128, 128);
+}
+
+/* Song title */
+.song-title {
+  font-size: 2.8rem;
+  color: black;
+  line-height: 1rem;
+}
+
+/* Song artist label */
+.song-artist-label {
+  font-size: 2rem;
+  color: rgb(128, 128, 128);
+}
+
+/* Song artist */
+.song-artist {
+  font-size: 2.4rem;
+  color: black;
+  line-height: 1rem;
+}
+
+/* Container for song information */
+.song-info-box {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.363);
+  padding: 1rem;
+}
+
+/* Chords container */
+.chords-box {
+  width: 50vw;
+}
+
+/* Chords */
+.chords {
+  font-size: 2rem;
+  color: black;
+  line-height: 1.5;
+}
+
+/* Other song information box */
+.others-box {
+  display: flex;
+  flex-direction: space-between;
+  align-content: center;
+  line-height: 1rem;
+  padding-top: 1rem;
+}
+
+/* Other song labels */
+.info-labels {
+  color: rgb(128, 128, 128);
+}
+
+/* Othe song information */
+.info {
+  color: black;
+  font-size: 1.8rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+/* Lyrics box */
+.lyrics-box {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.363);
+}
+
+/* Lyrics */
+.lyrics {
+  max-width: 400px;
+  width: 80%;
+  color: black;
+  font-size: 2rem;
+  line-height: 4rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+/* ------------------ Create song page body ------------------ */
+
+/* Create song title <h1> */
+.song-name {
+  font-weight: bold;
+  color: rgba(41, 41, 41, 0.842);
+}
+
+/* Create song text <p> */
+.song-text {
+  color: rgba(41, 41, 41, 0.842);
+}
+
+/* Add song button */
+.add-song {
+  width: 90px;
+  height: 25px;
+  position: absolute;
+  top: 12rem;
+  right: 2.1rem;
+  color: white;
+  background-color: rgba(59, 179, 248, 0.884) !important;
+  box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+/* Create song input labels */
+.input-labels {
+  color: rgba(41, 41, 41, 0.842);
+}
+
+/* Creates song inpupt fields */
+.create-inputs {
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid rgba(41, 41, 41, 0.842);
+  background-color: rgba(255, 255, 255, 0.644);
+}
+
+/* Chords box */
+.chords-box {
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Create song chords */
+.create-chords {
+  max-width: 400px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.644);
+}
+
+/* lyrics box */
+.lyrics-box {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
+
+/* Create song lyrics */
+.create-lyrics {
+  max-width: 400px;
+  width: 100%;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.644);
+}
+
+/* ------------------ Update song page body ------------------ */
+
+/* Update song button */
+.edit-song {
+  width: 90px;
+  height: 25px;
+  position: absolute;
+  top: 12rem;
+  right: 2.1rem;
+  color: white;
+  background-color: rgba(59, 179, 248, 0.884) !important;
+  box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+/* -------------------- media queries 320 -------------------- */
+
+/* Screen sizes 320 and up (iphone5/SE size) */
+@media screen and (min-width: 320px) {
+
+  /* Songbirdie logo on members */
+#SBgif {
+  top: -1rem;
+  right: 2rem;
+  width: 90px;
+  height: 90px;
+}
+
+}
+
+/* -------------------- media queries 768 -------------------- */
 
 /* Screen sizes 768 and up (iPad size) */
 @media screen and (min-width: 768px) {
@@ -294,7 +549,7 @@ body {
   }
 
   .members-page {
-    max-width: 1200px;
+    max-width: 800px;
     width: 80vw;
   }
 
@@ -314,101 +569,4 @@ body {
   .artist-title, .artist-name {
     font-size: 3.9rem;
   }
-}
-
-/*---------------- CreateSong.hbrs styling --------------------- */
-
-.create-song {
-  color: #333333;
-}
-
-#createSong {
-  color: #333333;
-  text-align: center;
-}
-
-/*---------------- Song hbrs styling --------------------- */
-
-/* Song page main section */
-.main-song {
-  height: 100%;
-  padding: 2rem;
-  background-image: url(../images/h-paper-stock-white.jpg);
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  margin: 0 auto;
-}
-
-/* Container for title and artist */
-.title-artist-box {
-  line-height: 3rem;
-}
-
-/* Song title info */
-.song-title-label {
-  font-size: 2rem;
-  color: rgb(128, 128, 128);
-}
-
-.song-title {
-  font-size: 3rem;
-  color: black;
-  line-height: 1rem;
-}
-
-/* Song artist info */
-.song-artist-label {
-  font-size: 2rem;
-  color: rgb(128, 128, 128);
-}
-
-.song-artist {
-  font-size: 3rem;
-  color: black;
-  line-height: 1rem;
-}
-
-/* Container for song information */
-.song-info-box {
-  display: flex;
-  border: solid 1px rgba(128, 128, 128, 0.459);
-  padding: 1rem;
-}
-
-/* Chords information */
-.chords-box {
-  width: 50vw;
-}
-
-.chords {
-  font-size: 2rem;
-  color: black;
-}
-
-/* Other song information */
-.others-box {
-  display: flex;
-  flex-direction: column;
-  line-height: 1rem;
-  padding-top: 1rem;
-  padding-left: 2rem;
-}
-
-.info-labels {
-  color: rgb(128, 128, 128);
-}
-
-.info {
-  color: black;
-  font-size: 2rem;
-}
-
-/* Lyrics */
-.lyrics {
-  color: black;
-  font-size: 2rem;
-  line-height: 5rem;
-  margin-top: 2rem;
-  padding: 1rem;
 }
