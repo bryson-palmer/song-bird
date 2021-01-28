@@ -570,4 +570,12 @@ song title/artist on members page */
   .artist-title, .artist-name {
     font-size: 3.9rem;
   }
+
+  .add-song {
+    right: 56.1rem;
+  }
+
+  .edit-song {
+    right: 56.1rem;
+  }
 }
