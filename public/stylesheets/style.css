@@ -237,7 +237,8 @@ song title/artist on members page */
 
 /* title for members page <h1> */
 .title-members {
-  font-size: 3.5rem;
+  font-size: 7.5rem;
+  color: rgba(41, 41, 41, 0.842);
 }
 
 /* -------------- Members page dynamic song list -------------- */
@@ -256,9 +257,16 @@ song title/artist on members page */
 }
 
 /* Styling for each artist/song */
-.artist-title, .artist-name {
+.artist-title {
+  font-size: 2.9rem;
+  display: inline-block;
+  color: black;
+}
+
+.artist-name {
   font-size: 1.9rem;
   display: inline-block;
+  color: grey;
 }
 
 /* ---------------------- Song page body ---------------------- */
@@ -463,6 +471,10 @@ song title/artist on members page */
   height: 90px;
 }
 
+artist-title {
+  font: 3.9rem;
+}
+
 }
 
 /* -------------------- media queries 768 -------------------- */
@@ -514,8 +526,12 @@ song title/artist on members page */
     font-size: 4rem;
   }
 
-  .artist-title, .artist-name {
-    font-size: 2.5rem;
+  .artist-title {
+    font-size: 3.9rem;
+  }
+
+  .artist-name {
+    font-size: 2.9rem;
   }
 }
 
@@ -568,8 +584,12 @@ song title/artist on members page */
     font-size: 4.5rem;
   }
 
-  .artist-title, .artist-name {
+  .artist-title {
     font-size: 3.9rem;
+  }
+
+  .artist-name {
+    font-size: 2.9rem;
   }
 
   .add-song {
