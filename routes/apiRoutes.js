@@ -2,6 +2,7 @@ const router = require("express").Router();
 const db = require("../models");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
+const { EmptyResultError } = require("sequelize/types");
 
 //api search routes
 router.get("/api/song", isAuthenticated, (req, res) => {
@@ -43,6 +44,25 @@ router.get("/:id", isAuthenticated, (req, res) => {
   }).then(dbSong => {
     res.json(dbSong);
   });
+});
+
+router.get("/:id", isAuthenticated, (req, res) => {
+  const songWhere = {
+    UserId: req.user.id
+  };
+
+  if(req.query.title) {
+    songWhere.name = {
+      [Op.like]: `%${req.query.title}%`;
+    };
+  }
+
+  Song.findAll({
+    where: songWhere
+  }).then(books => {
+    res.json(songs);
+  });
+
 });
 
 // api post/create route for song
