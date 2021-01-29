@@ -24,7 +24,7 @@ Within this page, you will see an extra tab at the top of your page - you now ha
 
 ## The SongBirdie Team 👥
 
-[Bryson Palmer](https://github.com/Bryson-Palmer)
-[Thomas Kading](https://github.com/Tskading)
-[Connor Favero](https://github.com/con0fav)
-[Xuefan Li](https://github.com/TomxLi)
+[Bryson Palmer](https://github.com/Bryson-Palmer) ||
+[Thomas Kading](https://github.com/Tskading) ||
+[Connor Favero](https://github.com/con0fav) ||
+[Xuefan Li](https://github.com/TomxLi) 
