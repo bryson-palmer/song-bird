@@ -39,7 +39,7 @@ router.get("/song/:id", isAuthenticated, (req, res) => {
       id: req.params.id
     }
   }).then(dbSong => {
-    console.log(dbSong);
+    // console.log(dbSong);
     res.render("song", dbSong);
   });
 });
