@@ -30,6 +30,20 @@ $(() => {
           .trim(),
         UserId: userId
       };
+      // error handling
+      if (!newSong.title) {
+        $("#alert-title .msg").text("Song tile is empty");
+        $("#alert-title").fadeIn(30);
+        return;
+      } else if (!newSong.artist) {
+        $("#alert-artist .msg").text("Artist name is empty");
+        $("#alert-artist").fadeIn(30);
+        return;
+      } else if (!newSong.tempo || newSong.tempo > 200 || newSong.tempo < 60) {
+        $("#alert-tempo .msg").text("BPM should be between 60 and 200");
+        $("#alert-tempo").fadeIn(30);
+        return;
+      }
       // ajax call
       $.ajax({
         url: "/api/addSong",

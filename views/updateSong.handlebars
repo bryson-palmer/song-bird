@@ -27,14 +27,29 @@
             {{!-- Inputs --}}
             <div class="create-input-box">
                 <label class="input-labels" for="title">Title name:</label><br>
+                {{!-- Alert Msg --}}
+                <div style="display: none" id="alert-title" class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span> <span class="msg"></span>
+                </div>
                 <input size="47.5" type="text" id="title" class="create-inputs" name="titlename" value="{{dataValues.title}}"><br>
             </div>
             <div class="create-input-box">
                 <label class="input-labels" for="artist">Artist name:</label><br>
+                {{!-- Alert Msg --}}
+                <div style="display: none" id="alert-artist" class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span> <span class="msg"></span>
+                </div>
                 <input size="47.5" type="text" id="artist" class="create-inputs" name="artistname" value="{{dataValues.artist}}"><br>
             </div>
             <div class="create-input-box">
                 <label class="input-labels" for="tempo">Tempo:</label><br>
+                {{!-- Alert Msg --}}
+                <div style="display: none" id="alert-tempo" class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span> <span class="msg"></span>
+                </div>
                 <input size="47.5" type="text" id="tempo" class="create-inputs" name="temponame" value="{{dataValues.tempo}}"><br>
             </div>
             <div class="create-input-box">
