@@ -1,8 +1,8 @@
+/* Starting with mobile first styling */
 body {
   width: 100vw;
   height: 100vh;
   background-color:rgb(41, 40, 40);
-  margin: 0 auto; 
 }
 
 .text-white {
@@ -22,21 +22,19 @@ body {
 /* hero_box */
 .hero_box {
   max-width: 800px;
-  width: 100%;
-  height: 100vh;
-  /* display: flex; */
-  /* justify-content: center; */
+  /* width: 400px; */
+  height: 90vh;
+  display: flex;
+  margin-top: 3rem;
 }
 
 .hero_logo {
   max-width: 800px;
   width: 100vw;
-  height: 100vh;
   background-image: url(../images/SBsmTxtWithJournal10sec.gif);
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
-  margin-top: 10rem;
+  background-size: cover;
 }
 
 /* Sign up */
@@ -44,7 +42,7 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   padding: 5rem;
 }
 
@@ -53,7 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 5rem;
+  padding-top: 4rem;
   padding-right: 7rem;
 }
 
@@ -113,9 +111,8 @@ body {
 /* Banner text */
 .banner-text {
   position: absolute;
-  top: 1.5rem;
+  top: 2rem;
   left: 2rem;
-  font-size: 1.3rem;
   text-align: right;
   padding-right: 2rem;
 }
@@ -141,7 +138,7 @@ body {
 /* Modal button */
 .modal-tab {
   color: rgba(23, 54, 95, 0.644);;
-  font-size: 1rem;
+  font-size: 1.3rem;
   background: rgb(2,0,36);
   background: linear-gradient(65deg, rgb(187, 187, 240) 0%, rgb(144, 198, 223) 7%, rgba(0,224,255,0.5998774509803921) 100%);
   box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
@@ -163,6 +160,7 @@ body {
 .modal-content {
   display: flex;
   justify-content: center;
+  background-color: rgb(60, 185, 243);
 }
 
 /* modal close button x */
@@ -177,8 +175,6 @@ body {
 
 /* modal window view */
 .modal-view {
-  /* display: flex;
-  flex-wrap: wrap; */
   background-color: transparent !important;
   padding: 1rem;
 }
@@ -208,6 +204,11 @@ body {
   outline: none;
 }
 
+/* box for <a> links */
+.link-box {
+  padding-top: 1rem;
+}
+
 /* modal links */
 .modal-view a {
   color: rgb(98, 3, 187) !important;
@@ -235,6 +236,7 @@ body {
   max-height: 100%;
   padding: 2rem;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.644);
 }
 
 /* --------------------- Members page body --------------------- */
@@ -246,11 +248,12 @@ song title/artist on members page */
   height: 100%;
   min-height: 100vh;
   padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.644);
 }
 
 /* title for members page <h1> */
 .title-members {
-  font-size: 7.5rem;
+  font-size: 5rem;
   color: rgba(41, 41, 41, 0.842);
 }
 
@@ -283,11 +286,6 @@ song title/artist on members page */
 }
 
 /* ---------------------- Song page body ---------------------- */
-
-/* Song header */
-/* .song-header {
-  
-} */
 
 /* Container for title and artist */
 .title-artist-box {
@@ -324,13 +322,7 @@ song title/artist on members page */
 .song-info-box {
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.363);
   padding: 1rem;
-}
-
-/* Chords container */
-.chords-box {
-  width: 50vw;
 }
 
 /* Chords */
@@ -338,6 +330,7 @@ song title/artist on members page */
   font-size: 2rem;
   color: black;
   line-height: 1.5;
+  /* background: transparent; */
 }
 
 /* Other song information box */
@@ -366,7 +359,6 @@ song title/artist on members page */
 .lyrics-box {
   display: flex;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.363);
 }
 
 /* Lyrics */
@@ -386,19 +378,21 @@ song title/artist on members page */
 .song-name {
   font-weight: bold;
   color: rgba(41, 41, 41, 0.842);
+  line-height: 3rem;
 }
 
 /* Create song text <p> */
 .song-text {
   color: rgba(41, 41, 41, 0.842);
+  padding-top: 1rem;
 }
 
 /* Add song button */
 .add-song {
   width: 90px;
-  height: 25px;
+  height: 35px;
   position: absolute;
-  top: 12rem;
+  top: 10rem;
   right: 2.1rem;
   color: white;
   background-color: rgba(59, 179, 248, 0.884) !important;
@@ -420,7 +414,7 @@ song title/artist on members page */
   max-width: 400px;
   width: 100%;
   border: 1px solid rgba(41, 41, 41, 0.842);
-  background-color: rgba(255, 255, 255, 0.644);
+  margin-bottom: 1rem;
 }
 
 /* Chords box */
@@ -433,7 +427,6 @@ song title/artist on members page */
 .create-chords {
   max-width: 400px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.644);
 }
 
 /* lyrics box */
@@ -441,7 +434,7 @@ song title/artist on members page */
   max-width: 400px;
   width: 100%;
   height: auto;
-  margin: 2rem 0;
+  margin: 0rem 0;
 }
 
 /* Create song lyrics */
@@ -449,7 +442,6 @@ song title/artist on members page */
   max-width: 400px;
   width: 100%;
   height: 600px;
-  background-color: rgba(255, 255, 255, 0.644);
 }
 
 /* ------------------ Update song page body ------------------ */
@@ -457,9 +449,9 @@ song title/artist on members page */
 /* Update song button */
 .edit-song {
   width: 90px;
-  height: 25px;
+  height: 35px;
   position: absolute;
-  top: 12rem;
+  top: 10rem;
   right: 2.1rem;
   color: white;
   background-color: rgba(59, 179, 248, 0.884) !important;
@@ -476,17 +468,77 @@ song title/artist on members page */
 /* Screen sizes 320 and up (iphone5/SE size) */
 @media screen and (min-width: 320px) {
 
+   /* hero_box */
+   .hero_box {
+    height: 90vh;
+    margin-top: 3rem;
+  }
+
+    /* Sign up and login fields */
+  .fields {
+    padding-top: 1rem;
+    padding-right: 3rem;
+  }
+
+  /* Banner text */
+  .banner-text {
+    font-size: 1.2rem;
+  }
+
   /* Songbirdie logo on members */
-#SBgif {
-  top: -1rem;
-  right: 2rem;
-  width: 90px;
-  height: 90px;
+  #SBgif {
+    top: -1rem;
+    right: 2rem;
+    width: 90px;
+    height: 90px;
+  }
+
+  artist-title {
+    font: 3.9rem;
+  }
+
 }
 
-artist-title {
-  font: 3.9rem;
+/* -------------------- media queries 375 -------------------- */
+
+/* Screen sizes 375 and up (iphone5/SE size) */
+@media screen and (min-width: 375px) {
+
+   /* hero_box */
+  .hero_box {
+    height: 80vh;
+    margin-top: 7rem;
+  }
+
+    /* Sign up and login fields */
+  .fields {
+    padding-top: 2rem;
+    padding-right: 7rem;
+  }
+
+   /* Banner text */
+   .banner-text {
+    font-size: 1.5rem;
+  }
+
 }
+
+/* -------------------- media queries 411 -------------------- */
+
+/* Screen sizes 411 and up (pixel 2XL size) */
+@media screen and (min-width: 411px) {
+
+  /* hero_box */
+  .hero_box {
+    height: 80vh;
+    margin-top: 8rem;
+  }
+
+    /* Sign up and login fields */
+  .fields {
+    padding-top: 5rem;
+    padding-right: 7rem;
+  }
 
 }
 
@@ -494,12 +546,11 @@ artist-title {
 
 /* Screen sizes 768 and up (iPad size) */
 @media screen and (min-width: 768px) {
-
-  .hero_logo {
+    
+  /* hero_box */
+  .hero_box {
     height: 100vh;
-    background-position: center;
-    background-size: cover;
-    margin-top: 0;
+    margin: 0;
   }
 
   /* Signup and login form */
@@ -509,25 +560,61 @@ artist-title {
 
   /* Input fields */
   .fields {
-    padding-right: 10rem;
+    padding-left: 10rem;
   }
 
   /* Input fields */
   .input-size {
     width: 300px;
   }
-  
-  .members-page {
-    width: 80vw;
+
+  /* Modal button */
+  .modal-tab {
+    font-size: 2rem;
+    margin-left: 2rem;
   }
 
-  .modal-style {
+  /* Song title artist box */
+  .title-artist-box {
+    max-width: 80vw;
     width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Container for song information */
+  .song-info-box {
+    max-width: 80vw;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  /* Other song information */
+  .info {
+    padding-right: 6rem;
+  }
+
+  /* Lyrics box */
+  .lyrics-box {
+    max-width: 800px;
+    border-right: solid 1px rgba(41, 41, 41, 0.842);
+  }
+
+  /* Lyrics */
+  .lyrics {
+    max-width: 800px;
   }
 
   /* Members header box */
   .members-header {
     height: 18vh;
+  }
+
+  /* Songbirdie logo on members */
+  #SBgif {
+    width: 150px;
+    height: 150px;
   }
 
   /* Banner text */
@@ -546,23 +633,110 @@ artist-title {
   .artist-name {
     font-size: 2.9rem;
   }
+
+  /* Add song button */
+  .add-song {
+    width: 120px;
+    top: 18rem;
+    right: 3.5rem;
+  }
+
+  /* Create song title <h1> */
+  .song-name {
+    font-weight: bold;
+    color: rgba(41, 41, 41, 0.842);
+    line-height: 3rem;
+    margin-left: 7.5rem;
+  }
+
+  /* Create song text <p> */
+  .song-text {
+    color: rgba(41, 41, 41, 0.842);
+    padding-top: 1rem;
+    margin-left: 7.5rem !important;
+  }
+
+  /* Create song inputs box */
+  .create-input-box {
+    max-width: 100vw;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Create song input labels */
+  .input-labels {
+    margin-left: 7.5rem;
+  }
+
+  /* Creates song inpupt fields */
+  .create-inputs {
+    max-width: 800px;
+    width: 80%;
+    margin-left: 7.5rem;
+  }
+
+  /* Chords box */
+  .chords-box {
+    max-width: 100vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  /* Create song chords */
+  .create-chords {
+    max-width: 800px;
+    width: 80%;
+    color: black;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 1rem;
+  }
+
+  /* lyrics box */
+  .lyrics-box {
+    max-width: 100vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  /* Create song lyrics */
+  .create-lyrics {
+    max-width: 800px;
+    width: 80%;
+    color: black;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    padding: 1rem;
+  }
+
+  /* Update song button  */
+  .edit-song {
+    width: 120px;
+    top: 18rem;
+    right: 3.5rem;
+  }
+
 }
 
 /* Screen sizes 1024 and up (iPad pro/desktop size) */
 @media screen and (min-width: 1024px) {
 
   /* hero_box */
-  .hero_box {
+  /* .hero_box {
     width: 100vw;
-  }
+  } */
   
   /* hero_logo */
-  .hero_logo {
+  /* .hero_logo {
     height: 100%;
     background-position: center;
     background-size: cover;
     margin-top: 0rem;
-  }
+  } */
 
   /* Signup and login form */
   .signup, .login {
@@ -612,4 +786,5 @@ artist-title {
   .edit-song {
     right: 56.1rem;
   }
+
 }

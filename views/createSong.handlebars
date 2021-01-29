@@ -14,27 +14,31 @@
         {{!-- Title --}}
         <h1 class="song-name">Add Song</h1>
         {{!-- Text --}}
-        <p class="song-text"></p>Fill in the fields below and add this song to your SongBook</p>
+        <p class="song-text">Fill in the fields below and add this song to your SongBook</p>
         {{!-- Form --}}
         <form class="create-song">
             {{!-- Button --}}
             <button class="add-song" type="submit" value="Submit">Add Song</button>
-            {{!-- Inputs --}}
-            <label class="input-labels" for="title">Title name:</label><br>
-            <input type="text" id="title" class="create-inputs" name="titlename"
-                placeholder="Example: Catch Hell Blues"><br>
-
-            <label for="artist">Artist name:</label><br>
-            <input type="text" id="artist" class="create-inputs" name="artistname"
-                placeholder="Example: The White Stripes"><br><br>
-
-            <label for="tempo">Tempo:</label><br>
-            <input type="text" id="tempo" class="create-inputs" name="temponame"
-                placeholder="(BPM between 60 and 200) Example: 96"><br>
-
-            <label for="key">Key:</label><br>
-            <input type="text" id="key" class="create-inputs" name="keyname" placeholder="Example: A major"><br><br>
-
+                {{!-- Inputs --}}
+            <div class="create-input-box">
+                <label class="input-labels" for="title">Title name:</label><br><br>
+                <input type="text" id="title" class="create-inputs" name="titlename"
+                    placeholder="Example: Catch Hell Blues"><br>
+            </div>
+            <div class="create-input-box">
+                <label class="input-labels" for="artist">Artist name:</label><br>
+                <input type="text" id="artist" class="create-inputs" name="artistname"
+                    placeholder="Example: The White Stripes"><br><br>
+            </div>
+            <div class="create-input-box">
+                <label class="input-labels" for="tempo">Tempo:</label><br>
+                <input type="text" id="tempo" class="create-inputs" name="temponame"
+                    placeholder="(BPM between 60 and 200) Example: 96"><br>
+            </div>
+            <div class="create-input-box">
+                <label class="input-labels" for="key">Key:</label><br>
+                <input type="text" id="key" class="create-inputs" name="keyname" placeholder="Example: A major"><br><br>
+            </div>
             <div class="chords-box">
                 <label for="chords"></label><br>
                 <textarea id="chords" class="create-chords" rows="6" ccols="50" name="chordsname" placeholder="Chords: 
@@ -44,31 +48,31 @@
             <div class="lyrics-box">
                 <label for="lyrics"></label><br>
                 <textarea id="lyrics" class="create-lyrics" rows="25" cols="50" name="lyricsname" placeholder="Lyrics: 
-                If you really want some hot water,
-                I can help you find it.
-                Oh Oh Ah yeah
-                Well, if they catch me around, 
-                you're playing rock the boat
-                I'm gonna catch Hell
-                And if you're throwing your voice in bed 
-                singing a note
-                I'm gonna catch Hell
-                I know it
-                That's right
-                Try and catch me
-                Oh yeah
-                Tricky, tricky
-                Yeah
-                Oh Oh
-                If you're getting tricky, lying to yourself
-                You're gonna catch Hell
-                And if you're testing God, lying to his face
-                You're gonna catch Hell
-                C'mon
-                Hey
-                That's it
-                They're gonna catch you
-                They're gonna catch you"></textarea><br><br>
+            If you really want some hot water,
+            I can help you find it.
+            Oh Oh Ah yeah
+            Well, if they catch me around, 
+            you're playing rock the boat
+            I'm gonna catch Hell
+            And if you're throwing your voice in bed 
+            singing a note
+            I'm gonna catch Hell
+            I know it
+            That's right
+            Try and catch me
+            Oh yeah
+            Tricky, tricky
+            Yeah
+            Oh Oh
+            If you're getting tricky, lying to yourself
+            You're gonna catch Hell
+            And if you're testing God, lying to his face
+            You're gonna catch Hell
+            C'mon
+            Hey
+            That's it
+            They're gonna catch you
+            They're gonna catch you"></textarea><br><br>
             </div>
         </form>
     </main>
