@@ -77,6 +77,7 @@ window.onclick = function(event) {
 /////////////////SEARCH BUTTON////////////////////
 // const searchInput = document.getElementById("song-name");
 
+// eslint-disable-next-line no-unused-vars
 function searchInput() {
   const songNameInput = document.getElementById("song-name").value;
   const title = document.querySelectorAll(".artist-title");
