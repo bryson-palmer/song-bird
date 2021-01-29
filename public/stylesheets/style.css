@@ -22,7 +22,6 @@ body {
 /* hero_box */
 .hero_box {
   max-width: 800px;
-  /* width: 400px; */
   height: 90vh;
   display: flex;
   margin-top: 3rem;
@@ -35,6 +34,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0 0 5px white;
 }
 
 /* Sign up */
@@ -65,13 +65,17 @@ body {
   display: inline-flex;
 }
 
-/* Sign up and login button */
-.button {
+/* Add song button */
+.landing-buttons {
+  width: 90px;
+  height: 35px;
   color: white;
   background-color: rgba(59, 179, 248, 0.884) !important;
+  box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
   border: none;
   outline: none;
   border-radius: 10px;
+  padding: 0;
 }
 
 /* Sign up or login button animation */
@@ -102,9 +106,6 @@ body {
 
 /* Members banner */
 .header-banner {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-content: flex-end; */
   position: relative;
 }
 
@@ -120,10 +121,6 @@ body {
 /* Songbirdie logo on members */
 #SBgif {
   position: absolute;
-  /* top: -3rem;
-  right: 3rem; */
-  /* width: 80px;
-  height: 80px; */
   box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
 }
 
@@ -228,7 +225,7 @@ body {
   background-size: auto;
   margin: 0 auto;
   opacity: 0.9;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.301);
+  box-shadow: 0 0 5px white;
 }
 
 /* Song page main section */
@@ -237,6 +234,27 @@ body {
   padding: 2rem;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.644);
+}
+
+/* Container for add and update button */
+.button-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Add song button */
+.buttons {
+  width: 90px;
+  height: 35px;
+  color: white;
+  background-color: rgba(59, 179, 248, 0.884) !important;
+  box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 0;
+  margin-top: -10rem;
 }
 
 /* --------------------- Members page body --------------------- */
@@ -332,7 +350,6 @@ song title/artist on members page */
   font-size: 2rem;
   color: black;
   line-height: 1.5;
-  /* background: transparent; */
 }
 
 /* Other song information box */
@@ -365,8 +382,7 @@ song title/artist on members page */
 
 /* Lyrics */
 .lyrics {
-  max-width: 400px;
-  width: 80%;
+  width: 100%;
   color: black;
   font-size: 2rem;
   line-height: 4rem;
@@ -387,23 +403,6 @@ song title/artist on members page */
 .song-text {
   color: rgba(41, 41, 41, 0.842);
   padding-top: 1rem;
-}
-
-/* Add song button */
-.add-song {
-  width: 90px;
-  height: 35px;
-  position: absolute;
-  top: 10rem;
-  right: 2.1rem;
-  color: white;
-  background-color: rgba(59, 179, 248, 0.884) !important;
-  box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  margin-top: 2rem;
-  padding: 0;
 }
 
 /* Create song input labels */
@@ -446,25 +445,6 @@ song title/artist on members page */
   height: 600px;
 }
 
-/* ------------------ Update song page body ------------------ */
-
-/* Update song button */
-.edit-song {
-  width: 90px;
-  height: 35px;
-  position: absolute;
-  top: 10rem;
-  right: 2.1rem;
-  color: white;
-  background-color: rgba(59, 179, 248, 0.884) !important;
-  box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  margin-top: 2rem;
-  padding: 0;
-}
-
 /* -------------------- media queries 320 -------------------- */
 
 /* Screen sizes 320 and up (iphone5/SE size) */
@@ -495,8 +475,9 @@ song title/artist on members page */
     height: 90px;
   }
 
-  artist-title {
-    font: 3.9rem;
+  /* Button */
+  .buttons {
+    margin-top: -13rem;
   }
 
 }
@@ -506,21 +487,37 @@ song title/artist on members page */
 /* Screen sizes 375 and up (iphone5/SE size) */
 @media screen and (min-width: 375px) {
 
-   /* hero_box */
+  /* hero_box */
   .hero_box {
     height: 80vh;
     margin-top: 7rem;
   }
 
-    /* Sign up and login fields */
+  /* Sign up and login fields */
   .fields {
     padding-top: 2rem;
     padding-right: 7rem;
   }
 
-   /* Banner text */
-   .banner-text {
-    font-size: 1.5rem;
+  /* Banner text */
+  .banner-text {
+    font-size: 1.3rem;
+  }
+
+   /* Songbirdie logo on members */
+   #SBgif {
+    top: -1rem;
+    right: 2rem;
+    width: 100px;
+    height: 100px;
+  }
+
+
+  /* Button */
+  .buttons {
+    width: 100px;
+    margin-right: 0rem;
+    margin-top: -11rem;
   }
 
 }
@@ -542,6 +539,22 @@ song title/artist on members page */
     padding-right: 7rem;
   }
 
+   /* Songbirdie logo on members */
+   #SBgif {
+    top: -1rem;
+    right: 2rem;
+    width: 110px;
+    height: 110px;
+  }
+
+
+  /* Button */
+  .buttons {
+    width: 110px;
+    margin-right: 0rem;
+    margin-top: -11rem;
+  }
+
 }
 
 /* -------------------- media queries 768 -------------------- */
@@ -552,7 +565,6 @@ song title/artist on members page */
   /* hero_box */
   .hero_box {
     height: 100vh;
-    margin: 0;
   }
 
   /* Signup and login form */
@@ -597,26 +609,14 @@ song title/artist on members page */
     padding-right: 6rem;
   }
 
-  /* Lyrics box */
-  .lyrics-box {
-    max-width: 800px;
-    border-right: solid 1px rgba(41, 41, 41, 0.842);
-  }
-
   /* Lyrics */
   .lyrics {
-    max-width: 800px;
+    width: 80%;
   }
 
   /* Members header box */
   .members-header {
     height: 18vh;
-  }
-
-  /* Songbirdie logo on members */
-  #SBgif {
-    width: 150px;
-    height: 150px;
   }
 
   /* Banner text */
@@ -628,6 +628,12 @@ song title/artist on members page */
     font-size: 4rem;
   }
 
+  /* title for members page <h1> */
+  .title-members {
+    font-size: 5rem;
+    margin-top: 10rem;
+  }
+
   .artist-title {
     font-size: 3.9rem;
   }
@@ -636,12 +642,20 @@ song title/artist on members page */
     font-size: 2.9rem;
   }
 
-  /* Add song button */
-  .add-song {
-    width: 120px;
-    top: 18rem;
-    right: 3.5rem;
+  /* /* Songbirdie logo on members */
+  #SBgif {
+    top: -1rem;
+    right: 6rem;
+    width: 180px;
+    height: 180px;
   }
+
+  /* Button */
+  .buttons {
+    width: 180px;
+    margin-right: 4rem;
+    margin-top: -5rem;
+  } 
 
   /* Create song title <h1> */
   .song-name {
@@ -715,39 +729,19 @@ song title/artist on members page */
     padding: 1rem;
   }
 
-  /* Update song button  */
-  .edit-song {
-    width: 120px;
-    top: 18rem;
-    right: 3.5rem;
-  }
-
 }
 
 /* Screen sizes 1024 and up (iPad pro/desktop size) */
 @media screen and (min-width: 1024px) {
 
-  /* hero_box
+  /* hero_box */
   .hero_box {
-    width: 100vw;
+    margin: 0 auto;
   }
-  
-  /* hero_logo */
-  /* .hero_logo {
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    margin-top: 0rem;
-  } */
 
   /* Signup and login form */
   .signup, .login {
-    margin-top: 12rem;
-  }
-
-  /* Sign up and login fields */
-  .fields {
-    padding-right: 15rem;
+    margin-top: 15rem;
   }
 
   /* Input fields */
@@ -764,29 +758,22 @@ song title/artist on members page */
     width: 80%;
   }
 
-  /* Banner text */
+  /* Banner text member's name */
   .banner-text {
     font-size: 3rem;
   }
-
-  .members-title {
-    font-size: 4.5rem;
-  }
-
-  .artist-title {
-    font-size: 3.9rem;
-  }
-
-  .artist-name {
-    font-size: 2.9rem;
-  }
-
-  .add-song {
-    right: 56.1rem;
-  }
-
-  .edit-song {
-    right: 56.1rem;
-  }
-
+    /* /* Songbirdie logo on members */
+    #SBgif {
+      top: -1rem;
+      right: 5rem;
+      width: 200px;
+      height: 200px;
+    }
+  
+    /* Button */
+    .buttons {
+      width: 200px;
+      margin-right: 3rem;
+      margin-top: -4rem;
+    } 
 }
