@@ -727,10 +727,10 @@ song title/artist on members page */
 /* Screen sizes 1024 and up (iPad pro/desktop size) */
 @media screen and (min-width: 1024px) {
 
-  /* hero_box */
-  /* .hero_box {
+  /* hero_box
+  .hero_box {
     width: 100vw;
-  } */
+  }
   
   /* hero_logo */
   /* .hero_logo {

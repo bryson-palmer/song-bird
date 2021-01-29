@@ -73,3 +73,31 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 };
+
+/////////////////SEARCH BUTTON////////////////////
+// const searchInput = document.getElementById("song-name");
+
+function searchInput() {
+  const songNameInput = document.getElementById("song-name").value;
+  const title = document.querySelectorAll(".artist-title");
+  const name = document.querySelectorAll(".artist-name");
+
+  console.log(songNameInput);
+
+  for (i = 0; i < title.length; i++) {
+    const song = title[i];
+    txtValue = song.textContent;
+    const bandValue = name[i].textContent;
+
+    if (
+      txtValue.toLowerCase().includes(songNameInput) ||
+      bandValue.toLowerCase().includes(songNameInput)
+    ) {
+      title[i].style.display = "block";
+      name[i].style.display = "block";
+    } else {
+      title[i].style.display = "none";
+      name[i].style.display = "none";
+    }
+  }
+}
