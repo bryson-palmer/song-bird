@@ -35,16 +35,15 @@ $(() => {
         $("#alert-title .msg").text("Song tile is empty");
         $("#alert-title").fadeIn(30);
         return;
-      } else if (!newSong.artist){
+      } else if (!newSong.artist) {
         $("#alert-artist .msg").text("Artist name is empty");
         $("#alert-artist").fadeIn(30);
         return;
-      } else if (!newSong.tempo || newSong.tempo > 200 || newSong.tempo < 60){
+      } else if (!newSong.tempo || newSong.tempo > 200 || newSong.tempo < 60) {
         $("#alert-tempo .msg").text("BPM should be between 60 and 200");
         $("#alert-tempo").fadeIn(30);
         return;
-      };
-
+      }
       // ajax call
       $.ajax({
         url: "/api/addSong",
@@ -75,17 +74,17 @@ const btn = document.getElementById("songbirdie-tab");
 const span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function () {
+btn.onclick = function() {
   modal.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+span.onclick = function() {
   modal.style.display = "none";
 };
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.onclick = function(event) {
   if (event.target === modal) {
     modal.style.display = "none";
   }

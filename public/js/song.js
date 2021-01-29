@@ -30,6 +30,24 @@ $(() => {
         .val()
         .trim()
     };
+
+    if (!updatedSong.title) {
+      $("#alert-title .msg").text("Song tile is empty");
+      $("#alert-title").fadeIn(300);
+      return;
+    } else if (!updatedSong.artist) {
+      $("#alert-artist .msg").text("Artist name is empty");
+      $("#alert-artist").fadeIn(300);
+      return;
+    } else if (
+      !updatedSong.tempo ||
+      updatedSong.tempo > 200 ||
+      updatedSong.tempo < 60
+    ) {
+      $("#alert-tempo .msg").text("BPM should be between 60 and 200");
+      $("#alert-tempo").fadeIn(300);
+      return;
+    }
     // ajax call
     $.ajax({
       url: "/api/song/" + e.target.dataset.id,
