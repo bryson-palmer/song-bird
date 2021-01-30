@@ -3,4 +3,5 @@ $("#scrollbtn").click(function() {
     .find("i")
     .toggleClass("glyphicon-play")
     .toggleClass("glyphicon-pause");
+  $("html, body").animate({ scrollBottom: 0 }, "slow");
 });
