@@ -3,6 +3,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color:rgb(41, 40, 40);
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .text-white {
@@ -93,7 +94,7 @@ body {
 
 /* Header container for all pages */
 .header-box {
-  background-color: rgba(60, 185, 243, 0.678);
+  background-color: rgba(60, 185, 243, 0.808);
   margin: 0 auto;
 }
 
@@ -121,7 +122,7 @@ body {
 /* Songbirdie logo on members */
 #SBgif {
   position: absolute;
-  box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
+  border: solid 1px  rgb(80, 80, 80);
 }
 
 /* ------------------ Modal styling on all pages ------------------ */
@@ -224,7 +225,6 @@ body {
   background-repeat: repeat;
   background-size: auto;
   margin: 0 auto;
-  opacity: 0.9;
   box-shadow: 0 0 5px white;
 }
 
@@ -233,7 +233,7 @@ body {
   max-height: 100%;
   padding: 2rem;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.644);
+  background-color: rgba(255, 255, 255, 0.808);
 }
 
 /* Container for add and update button */
@@ -248,9 +248,8 @@ body {
   width: 90px;
   height: 35px;
   color: white;
-  background-color: rgba(59, 179, 248, 0.884) !important;
-  box-shadow: 0 0 15px rgba(41, 40, 40, 0.514);
-  border: none;
+  background-color: rgba(78, 151, 211, 0.938) !important;
+  border: solid 3px rgb(78, 151, 211);
   outline: none;
   border-radius: 10px;
   padding: 0;
@@ -266,7 +265,7 @@ song title/artist on members page */
   height: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.644);
+  background-color: rgba(255, 255, 255, 0.808);
 }
 
 /* title for members page <h1> */
@@ -477,7 +476,7 @@ song title/artist on members page */
 
   /* Button */
   .buttons {
-    margin-top: -13rem;
+    margin-top: -10rem;
   }
 
 }
@@ -517,7 +516,7 @@ song title/artist on members page */
   .buttons {
     width: 100px;
     margin-right: 0rem;
-    margin-top: -11rem;
+    margin-top: -10rem;
   }
 
 }
@@ -552,7 +551,7 @@ song title/artist on members page */
   .buttons {
     width: 110px;
     margin-right: 0rem;
-    margin-top: -11rem;
+    margin-top: -8rem;
   }
 
 }
@@ -654,7 +653,7 @@ song title/artist on members page */
   .buttons {
     width: 180px;
     margin-right: 4rem;
-    margin-top: -5rem;
+    margin-top: -2rem;
   } 
 
   /* Create song title <h1> */
@@ -774,6 +773,6 @@ song title/artist on members page */
     .buttons {
       width: 200px;
       margin-right: 3rem;
-      margin-top: -4rem;
+      margin-top: 0rem;
     } 
 }
