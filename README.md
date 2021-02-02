@@ -75,6 +75,10 @@ There are several features we would love to get in the **SongBirdie** app in the
 
 * Yet another feature that was thought of, was to be able to shift a song up or down in key and have the chords change with it. So you can find the key that you sing in best.
 
+* We would really like to add an auto scroll feature to the song page allowing the user to keep playing and not having to scroll down the page. Also, to provide the ability to adjust the speed of scrolling.
+
+* Possibly to add a drum track or click track to play the song witht he ability to change the tempo.
+
 * Lastly, the ability to change modes and have the chords adjust accordingly would be very satisfying to use.
 
 ## <a id='team'></a> The SongBirdie Team 👥
