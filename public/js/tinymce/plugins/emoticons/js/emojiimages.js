@@ -1,3 +1,6 @@
+/* eslint-disable camelcase */
+/* eslint-disable quotes */
+/* eslint-disable prettier/prettier */
 // Source: npm package: emojilib
 // Images provided by twemoji: https://github.com/twitter/twemoji
 window.tinymce.Resource.add("tinymce.plugins.emoticons", {
