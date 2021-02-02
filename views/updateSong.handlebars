@@ -15,11 +15,11 @@
     {{!-- Main body of the page --}}
     <main class="main-song">
         {{!-- Title --}}
-        <h1 class="song-name">Update<br>Song</h1>
+        <h1 class="song-name">Update Song</h1>
         {{!-- Text --}}
         <p class="song-text"></p>Update your song here and save it to your songbook.</p>
         {{!-- Form --}}
-        <form class="update-song" data-id="{{dataValues.id}}">
+        <form method="put" class="update-song" data-id="{{dataValues.id}}">
             {{!-- Button --}}
             <div class="button-box">
                 <button class="buttons" type="submit" value="Submit">Update</button>
@@ -58,12 +58,12 @@
             </div>
             <div class="chords-box">
                 <label for="chords"></label><br>
-                <textarea id="chords" class="create-chords" rows="6" cols="50" name="chordsname">{{dataValues.chords}}</textarea><br><br>
+                <textarea id="chords" class="create-chords tinymce" rows="25" cols="50" name="chordsname">{{{dataValues.chords}}}</textarea><br><br>
             </div>
 
             <div class="lyrics-box">
                 <label for="lyrics"></label><br>
-                <textarea id="lyrics" class="create-lyrics" rows="25" cols="50"  name="lyricsname">{{dataValues.lyrics}}</textarea><br><br>
+                <textarea id="lyrics" class="create-lyrics tinymce" rows="25" cols="50" name="lyricsname">{{{dataValues.lyrics}}}</textarea><br><br>
             </div>
         </form>
     </main>

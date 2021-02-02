@@ -22,12 +22,10 @@ $(() => {
         songkey: $("#key")
           .val()
           .trim(),
-        chords: $("#chords")
-          .val()
-          .trim(),
-        lyrics: $("#lyrics")
-          .val()
-          .trim(),
+        chords: $("#chords").val(),
+        // .trim(),
+        lyrics: $("#lyrics").val(),
+        // .trim(),
         UserId: userId
       };
       // error handling
