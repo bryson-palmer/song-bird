@@ -1,5 +1,3 @@
-/* eslint-disable camelcase */
-/* eslint-disable prettier/prettier */
 // Source: npm package: emojilib, file:emojis.json
 window.tinymce.Resource.add("tinymce.plugins.emoticons", {
   grinning: {
