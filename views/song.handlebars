@@ -1,3 +1,5 @@
+<link href="/stylesheets/style.css" rel="stylesheet">
+
 <!-- All content -->
 <div class="full-page">
   <div class="header-box">
@@ -25,13 +27,13 @@
           <p class="info-labels">Key: <span class="info">{{dataValues.songkey}}</span></p>
         </div>
         {{!-- Chords --}}
-        <div class="">
-          <p class="chords">{{{dataValues.chords}}}</p>
+        <div class="chords-box">
+          <p class="chords">{{dataValues.chords}}</p>
         </div>
       </div>
       {{!-- Lyrics --}}
       <div class="lyrics-box">
-        <p class="lyrics">{{{dataValues.lyrics}}}</p>
+        <p class="lyrics">{{dataValues.lyrics}}</p>
       </div>
   </main>
 </div>
