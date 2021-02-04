@@ -9,30 +9,29 @@
     {{>header/header-block}}
   </div>
 
-  <main class="main-song">
+  <main class="form-main">
     {{!-- Header on song page --}}
-    <div class="song-header">
-      {{!-- Header details --}}
-      <div class="title-artist-box">
-        <h1 class="song-title-label">Title: <span class="song-title">{{dataValues.title}}</span></h1>
-        <h2 class="song-artist-label">Artist: <span class="song-artist">{{dataValues.artist}}</span></h2>
-      </div>
-      {{!-- Song information --}}
+    <div class="song-artist-box">
+      <h1 class="song-title-label">Title: <span class="song-title">{{dataValues.title}}</span></h1>
+      <h2 class="song-artist-label">Artist: <span class="song-artist">{{dataValues.artist}}</span></h2>
+    </div>
+    {{!-- Song information --}}
+    <div class="song-box">
+      {{!-- Tempo/Key --}}
       <div class="song-info-box">
-        {{!-- Tempo/Key --}}
-        <div class="others-box">
-          <p class="info-labels">Tempo: <span class="info">{{dataValues.tempo}}</span></p>
-          <p class="info-labels">Key: <span class="info">{{dataValues.songkey}}</span></p>
-        </div>
-        {{!-- Chords --}}
-        <div class="chords-box">
-          <p class="chords">{{{dataValues.chords}}}</p>
-        </div>
+        <p class="song-info-labels">Tempo: <span class="song-info">{{dataValues.tempo}}</span></p>
+        <p class="song-info-labels">Key: <span class="song-info">{{dataValues.songkey}}</span></p>
       </div>
-      {{!-- Lyrics --}}
-      <div class="lyrics-box">
-        <p class="lyrics">{{{dataValues.lyrics}}}</p>
+      {{!-- Chords --}}
+      <div class="song-chords-box">
+        <p class="song-chords">{{{dataValues.chords}}}</p>
       </div>
+    </div>
+    {{!-- Lyrics --}}
+    <div class="song-lyrics-box">
+      <p class="song-lyrics">{{{dataValues.lyrics}}}</p>
+    </div>
+
   </main>
 </div>
 

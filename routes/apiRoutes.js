@@ -10,9 +10,14 @@ router.get("/api/song", isAuthenticated, (req, res) => {
     where: {
       UserId: req.user.id
     }
-  }).then(dbSong => {
-    res.json(dbSong);
-  });
+  })
+    .then(dbSong => {
+      res.json(dbSong);
+    })
+    .catch(err => {
+      console.log(err);
+      res.json(err);
+    });
 });
 
 // router.get("/members", (req, res) => {
@@ -29,9 +34,14 @@ router.get("/api/song", isAuthenticated, (req, res) => {
 
 // get route for all songs and artists to be displayed on members page
 router.get("/members", (req, res) => {
-  db.Song.findAll(key).then(dbSong => {
-    res.json(dbSong);
-  });
+  db.Song.findAll(key)
+    .then(dbSong => {
+      res.json(dbSong);
+    })
+    .catch(err => {
+      console.log(err);
+      res.json(err);
+    });
 });
 
 // get route for a single song to be displayed on the song page
@@ -40,9 +50,14 @@ router.get("/:id", isAuthenticated, (req, res) => {
     where: {
       song: req.params.song
     }
-  }).then(dbSong => {
-    res.json(dbSong);
-  });
+  })
+    .then(dbSong => {
+      res.json(dbSong);
+    })
+    .catch(err => {
+      console.log(err);
+      res.json(err);
+    });
 });
 
 // api post/create route for song
@@ -60,6 +75,7 @@ router.post("/api/addSong", isAuthenticated, (req, res) => {
       res.json(dbSong);
     })
     .catch(err => {
+      console.log(err);
       res.json(err);
     });
 });
@@ -81,9 +97,14 @@ router.put("/api/song/:id", isAuthenticated, (req, res) => {
         id: req.params.id
       }
     }
-  ).then(dbSong => {
-    res.json(dbSong);
-  });
+  )
+    .then(dbSong => {
+      res.json(dbSong);
+    })
+    .catch(err => {
+      console.log(err);
+      res.json(err);
+    });
 });
 
 // api delete/destroy route for a singel song
@@ -97,6 +118,7 @@ router.delete("/api/song/:id", isAuthenticated, (req, res) => {
       res.json(dbSong);
     })
     .catch(err => {
+      console.log(err);
       res.json(err);
     });
 });

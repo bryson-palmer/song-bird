@@ -42,7 +42,7 @@ $(document).ready(() => {
     }
 
     // Append to heml
-    $("#song-list-box").append(artistSongs);
+    $("#members-song-list").append(artistSongs);
   });
 });
 
@@ -75,11 +75,11 @@ window.onclick = function(event) {
 };
 
 /////////////////SEARCH BUTTON////////////////////
-// const searchInput = document.getElementById("song-name");
+// const searchInput = document.getElementById("song-search");
 
 // eslint-disable-next-line no-unused-vars
 function searchInput() {
-  const songNameInput = document.getElementById("song-name").value;
+  const songNameInput = document.getElementById("song-search").value;
   const title = document.querySelectorAll(".artist-title");
   const name = document.querySelectorAll(".artist-name");
 
