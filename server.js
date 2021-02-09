@@ -1,5 +1,6 @@
 // Requiring necessary npm packages
 require("dotenv").config();
+const compression = require("compression");
 const express = require("express");
 const session = require("express-session");
 
@@ -15,6 +16,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+app.use(compression());
 
 // Set Handlebars.
 const exphbs = require("express-handlebars");
